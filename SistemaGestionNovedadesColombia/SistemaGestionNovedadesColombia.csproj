@@ -48,6 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\Parametros\GrupoTallaColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\GrupoTallaColor.Designer.cs">
+      <DependentUpon>GrupoTallaColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Paramentros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Parametros\Paramentros.Designer.cs">
+      <DependentUpon>Paramentros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Usuario\BusquedaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Usuario\BusquedaUsuario.Designer.cs">
+      <DependentUpon>BusquedaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Usuario\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Usuario\Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ayuda\AcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +150,18 @@
     <Compile Include="IngresoSistema.Designer.cs">
       <DependentUpon>IngresoSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personal\BusquedaPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\BusquedaPersona.Designer.cs">
+      <DependentUpon>BusquedaPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal\Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personal\Personal.Designer.cs">
+      <DependentUpon>Personal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor\BusquedaProveedor.cs">
@@ -140,6 +176,18 @@
     <Compile Include="Proveedor\Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administracion\Parametros\GrupoTallaColor.resx">
+      <DependentUpon>GrupoTallaColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Parametros\Paramentros.resx">
+      <DependentUpon>Paramentros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Usuario\BusquedaUsuario.resx">
+      <DependentUpon>BusquedaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Usuario\Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ayuda\AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +227,12 @@
     <EmbeddedResource Include="IngresoSistema.resx">
       <DependentUpon>IngresoSistema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Personal\BusquedaPersona.resx">
+      <DependentUpon>BusquedaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personal\Personal.resx">
+      <DependentUpon>Personal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -208,11 +262,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Administracion\Parametros\" />
-    <Folder Include="Administracion\Usuario\" />
-    <Folder Include="Personal\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\background.png" />
   </ItemGroup>

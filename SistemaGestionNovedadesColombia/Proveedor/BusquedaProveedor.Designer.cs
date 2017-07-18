@@ -191,7 +191,7 @@
             this.ClientSize = new System.Drawing.Size(713, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "BusquedaProveedor";
-            this.Text = "BusquedaProveedor";
+            this.Text = "Buscar Proveedor";
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

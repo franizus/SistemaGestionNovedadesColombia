@@ -15,6 +15,24 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
         public Paramentros()
         {
             InitializeComponent();
+            this.CenterToScreen();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Parametros guardados con exito.", "Registro Parametros", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnSalir.PerformClick();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GrupoTallaColor gtc = new GrupoTallaColor();
+            gtc.Show();
         }
     }
 }

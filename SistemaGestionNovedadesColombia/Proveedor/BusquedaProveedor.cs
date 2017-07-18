@@ -29,7 +29,7 @@ namespace SistemaGestionNovedadesColombia.Proveedor
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             Proveedor form = new Proveedor(tipo);
-            form.Text = tipo + " Cliente";
+            form.Text = tipo + " Proveedor";
             form.Show();
             btnSalir.PerformClick();
         }

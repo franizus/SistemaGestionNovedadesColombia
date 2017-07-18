@@ -9,8 +9,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaGestionNovedadesColombia.Administracion.Parametros;
+using SistemaGestionNovedadesColombia.Administracion.Usuario;
 using SistemaGestionNovedadesColombia.Facturacion;
 using SistemaGestionNovedadesColombia.Inventario;
+using SistemaGestionNovedadesColombia.Personal;
 using SistemaGestionNovedadesColombia.Proveedor;
 
 namespace SistemaGestionNovedadesColombia
@@ -157,6 +160,47 @@ namespace SistemaGestionNovedadesColombia
             BusquedaFactura bf = new BusquedaFactura();
             bf.setTipo("Eliminar");
             bf.Show();
+        }
+
+        private void registrarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Personal.Personal p = new Personal.Personal("Registrar");
+            p.Text = "Registrar Vendedor";
+            p.Show();
+        }
+
+        private void modificarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BusquedaPersona bp = new BusquedaPersona();
+            bp.setTipo("Modificar");
+            bp.Show();
+        }
+
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            BusquedaPersona bp = new BusquedaPersona();
+            bp.setTipo("Consultar");
+            bp.Show();
+        }
+
+        private void registrarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Usuario u = new Usuario("Registrar");
+            u.Text = "Registrar Usuario";
+            u.Show();
+        }
+
+        private void modificarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            BusquedaUsuario bu = new BusquedaUsuario();
+            bu.setTipo("Modificar");
+            bu.Show();
+        }
+
+        private void parametrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Paramentros p = new Paramentros();
+            p.Show();
         }
     }
 }
