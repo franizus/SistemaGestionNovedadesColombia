@@ -18,12 +18,7 @@ namespace SistemaGestionNovedadesColombia
             this.CenterToScreen();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
             if (txtUsuario.Text.Equals("admin") && txtContrasenia.Text.Equals("admin"))
             {
@@ -39,17 +34,19 @@ namespace SistemaGestionNovedadesColombia
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void txtContrasenia_KeyDown(object sender, KeyEventArgs e)
+        private void txtContrasenia_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button1_Click(this, new EventArgs());
+                btnIngresar.PerformClick();
+                e.SuppressKeyPress = true;
+                e.Handled = true;
             }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

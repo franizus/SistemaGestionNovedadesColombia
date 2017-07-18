@@ -12,29 +12,101 @@ namespace SistemaGestionNovedadesColombia
 {
     public partial class Cliente : Form
     {
-        public Cliente()
+        public Cliente(String tipo)
         {
             InitializeComponent();
             this.CenterToScreen();
             MaximizeBox = false;
             MinimizeBox = false;
-            this.ActiveControl = idTypeCombo;
+            this.ActiveControl = comboIDType;
+            initComponents(tipo);
         }
 
-        private void initComponents()
+        private void initComponents(String tipo)
         {
-            idTypeCombo.SelectedIndex = 0;
-            idTypeCombo.DropDownStyle = ComboBoxStyle.DropDownList;
+            tableLayoutPanel1.RowStyles[0].SizeType = SizeType.Percent;
+            tableLayoutPanel1.RowStyles[0].Height = 45;
+            tableLayoutPanel1.RowStyles[1].SizeType = SizeType.Percent;
+            tableLayoutPanel1.RowStyles[1].Height = 45;
+            
+            if (tipo.Equals("Registrar") || tipo.Equals("Modificar"))
+            {
+                tableLayoutPanel1.RowStyles[2].SizeType = SizeType.Percent;
+                tableLayoutPanel1.RowStyles[2].Height = 10;
+                btnSalir.Height = 31;
+                btnLimpiar.Height = 31;
+                btnGuardar.Height = 31;
+            }
+            else
+            {
+                comboIDType.Enabled = false;
+                comboStatus.Enabled = false;
+                comboSubjType.Enabled = false;
+                txtID.Enabled = false;
+                txtNombre.Enabled = false;
+                txtEmail.Enabled = false;
+                txtDireccion.Enabled = false;
+                txtTelf.Enabled = false;
+                if (tipo.Equals("Consultar"))
+                {
+                    tableLayoutPanel1.RowStyles[3].SizeType = SizeType.Percent;
+                    tableLayoutPanel1.RowStyles[3].Height = 10;
+                    btnSalir1.Height = 31;
+                }
+                if (tipo.Equals("Eliminar"))
+                {
+                    tableLayoutPanel1.RowStyles[4].SizeType = SizeType.Percent;
+                    tableLayoutPanel1.RowStyles[4].Height = 10;
+                    btnSalir2.Height = 31;
+                    btnEliminar.Height = 31;
+                }
+            }
+
+            comboIDType.SelectedIndex = 0;
+            comboIDType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboStatus.SelectedIndex = 0;
+            comboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboSubjType.SelectedIndex = 0;
+            comboSubjType.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            comboIDType.SelectedIndex = 0;
+            comboStatus.SelectedIndex = 0;
+            comboSubjType.SelectedIndex = 0;
+            txtID.Text = "";
+            txtNombre.Text = "";
+            txtEmail.Text = "";
+            txtDireccion.Text = "";
+            txtTelf.Text = "";
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Cliente guardado con exito.", "Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnSalir.PerformClick();
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSalir1_Click(object sender, EventArgs e)
+        {
+            btnSalir.PerformClick();
+        }
+
+        private void btnSalir2_Click_1(object sender, EventArgs e)
+        {
+            btnSalir.PerformClick();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cliente eliminado con exito.", "Eliminacion Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btnSalir.PerformClick();
         }
     }
 }

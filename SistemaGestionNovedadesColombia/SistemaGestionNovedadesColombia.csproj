@@ -54,6 +54,54 @@
     <Compile Include="Ayuda\AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion\BuscarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BuscarArticulo.Designer.cs">
+      <DependentUpon>BuscarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\BuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BuscarCliente.Designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\BuscarVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BuscarVendedor.Designer.cs">
+      <DependentUpon>BuscarVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\BusquedaFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\BusquedaFactura.Designer.cs">
+      <DependentUpon>BusquedaFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturacion\Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion\Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\AgregarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\AgregarArticulo.Designer.cs">
+      <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\BusquedaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\BusquedaArticulo.Designer.cs">
+      <DependentUpon>BusquedaArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\ArticuloInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\ArticuloInventario.Designer.cs">
+      <DependentUpon>ArticuloInventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,11 +114,11 @@
     <Compile Include="Cliente\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Cliente\BusquedaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Cliente\BusquedaCliente.Designer.cs">
+      <DependentUpon>BusquedaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="IngresoSistema.cs">
       <SubType>Form</SubType>
@@ -80,8 +128,44 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor\BusquedaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\BusquedaProveedor.Designer.cs">
+      <DependentUpon>BusquedaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\Proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\Proveedor.Designer.cs">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Ayuda\AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BuscarArticulo.resx">
+      <DependentUpon>BuscarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BuscarVendedor.resx">
+      <DependentUpon>BuscarVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\BusquedaFactura.resx">
+      <DependentUpon>BusquedaFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturacion\Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\AgregarArticulo.resx">
+      <DependentUpon>AgregarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\ArticuloInventario.resx">
+      <DependentUpon>ArticuloInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\BusquedaArticulo.resx">
+      <DependentUpon>BusquedaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -89,8 +173,8 @@
     <EmbeddedResource Include="Cliente\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\BusquedaCliente.resx">
+      <DependentUpon>BusquedaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngresoSistema.resx">
       <DependentUpon>IngresoSistema.cs</DependentUpon>
@@ -103,7 +187,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Proveedor\BusquedaProveedor.resx">
+      <DependentUpon>BusquedaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Proveedor.resx">
+      <DependentUpon>Proveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,10 +209,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Administracion\" />
-    <Folder Include="Facturacion\" />
-    <Folder Include="Inventario\" />
-    <Folder Include="Proveedor\" />
+    <Folder Include="Administracion\Parametros\" />
+    <Folder Include="Administracion\Usuario\" />
+    <Folder Include="Personal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

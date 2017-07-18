@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaGestionNovedadesColombia
+namespace SistemaGestionNovedadesColombia.Administracion.Usuario
 {
-    public partial class Form3 : Form
+    public partial class BusquedaUsuario : Form
     {
-        public Form3()
+        public BusquedaUsuario()
         {
             InitializeComponent();
         }
