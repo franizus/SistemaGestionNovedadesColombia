@@ -188,7 +188,7 @@
             // 
             // nombreCliente
             // 
-            this.nombreCliente.HeaderText = "Nombre Cliente";
+            this.nombreCliente.HeaderText = "Nombre RegistroCliente";
             this.nombreCliente.Name = "nombreCliente";
             this.nombreCliente.ReadOnly = true;
             this.nombreCliente.Width = 200;

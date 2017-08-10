@@ -1,6 +1,6 @@
 ﻿namespace SistemaGestionNovedadesColombia
 {
-    partial class Cliente
+    partial class RegistroCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -36,24 +36,24 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
             this.txtTelf = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.comboIDType = new System.Windows.Forms.ComboBox();
-            this.comboStatus = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboSubjType = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTipoID = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.lblZona = new System.Windows.Forms.Label();
+            this.comboStatus = new System.Windows.Forms.ComboBox();
+            this.comboZona = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -177,9 +177,9 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label8, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.lblTelefono, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.lblEmail, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.lblDireccion, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.txtTelf, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtEmail, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.txtDireccion, 1, 2);
@@ -193,41 +193,41 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(718, 245);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // label6
+            // lblTelefono
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(153, 14);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 20);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Telefono:";
+            this.lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(153, 14);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(78, 20);
+            this.lblTelefono.TabIndex = 31;
+            this.lblTelefono.Text = "Telefono:";
             // 
-            // label7
+            // lblEmail
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(169, 63);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 20);
-            this.label7.TabIndex = 32;
-            this.label7.Text = "E-mail:";
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(169, 63);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(62, 20);
+            this.lblEmail.TabIndex = 32;
+            this.lblEmail.Text = "E-mail:";
             // 
-            // label8
+            // lblDireccion
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(145, 98);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 20);
-            this.label8.TabIndex = 33;
-            this.label8.Text = "Direccion:";
+            this.lblDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(145, 98);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(86, 20);
+            this.lblDireccion.TabIndex = 33;
+            this.lblDireccion.Text = "Direccion:";
             // 
             // txtTelf
             // 
@@ -238,6 +238,7 @@
             this.txtTelf.Name = "txtTelf";
             this.txtTelf.Size = new System.Drawing.Size(332, 26);
             this.txtTelf.TabIndex = 34;
+            this.txtTelf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelf_KeyPress);
             // 
             // txtEmail
             // 
@@ -270,7 +271,7 @@
             this.groupBox1.Size = new System.Drawing.Size(728, 279);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Cliente";
+            this.groupBox1.Text = "Datos";
             // 
             // tableLayoutPanel3
             // 
@@ -278,15 +279,15 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
             this.tableLayoutPanel3.Controls.Add(this.comboIDType, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.comboStatus, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.comboSubjType, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtNombre, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.txtID, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lblTipoID, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lblID, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lblNombre, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtID, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.txtNombre, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lblEstado, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.lblZona, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.comboStatus, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.comboZona, 1, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 24);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -305,14 +306,96 @@
             this.comboIDType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboIDType.FormattingEnabled = true;
             this.comboIDType.Items.AddRange(new object[] {
-            "Registro Unico Contribuyente (RUC)",
-            "Cedula de Identidad",
+            "RUC",
+            "Cedula",
             "Pasaporte"});
             this.comboIDType.Location = new System.Drawing.Point(313, 11);
             this.comboIDType.Margin = new System.Windows.Forms.Padding(4);
             this.comboIDType.Name = "comboIDType";
             this.comboIDType.Size = new System.Drawing.Size(333, 28);
             this.comboIDType.TabIndex = 31;
+            this.comboIDType.SelectedIndexChanged += new System.EventHandler(this.comboIDType_SelectedIndexChanged);
+            // 
+            // lblTipoID
+            // 
+            this.lblTipoID.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblTipoID.AutoSize = true;
+            this.lblTipoID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoID.Location = new System.Drawing.Point(61, 15);
+            this.lblTipoID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTipoID.Name = "lblTipoID";
+            this.lblTipoID.Size = new System.Drawing.Size(172, 20);
+            this.lblTipoID.TabIndex = 30;
+            this.lblTipoID.Text = "Tipo de Identificacion:";
+            // 
+            // lblID
+            // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(98, 65);
+            this.lblID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(135, 20);
+            this.lblID.TabIndex = 32;
+            this.lblID.Text = "Nº Identificacion:";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(160, 115);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(73, 20);
+            this.lblNombre.TabIndex = 34;
+            this.lblNombre.Text = "Nombre:";
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(314, 62);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(332, 26);
+            this.txtID.TabIndex = 33;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(314, 112);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(332, 26);
+            this.txtNombre.TabIndex = 35;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(167, 216);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(66, 20);
+            this.lblEstado.TabIndex = 30;
+            this.lblEstado.Text = "Estado:";
+            // 
+            // lblZona
+            // 
+            this.lblZona.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblZona.AutoSize = true;
+            this.lblZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblZona.Location = new System.Drawing.Point(183, 165);
+            this.lblZona.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblZona.Name = "lblZona";
+            this.lblZona.Size = new System.Drawing.Size(50, 20);
+            this.lblZona.TabIndex = 36;
+            this.lblZona.Text = "Zona:";
             // 
             // comboStatus
             // 
@@ -322,105 +405,25 @@
             this.comboStatus.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.comboStatus.Location = new System.Drawing.Point(314, 61);
+            this.comboStatus.Location = new System.Drawing.Point(314, 212);
             this.comboStatus.Margin = new System.Windows.Forms.Padding(4);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(331, 28);
             this.comboStatus.TabIndex = 31;
             // 
-            // label2
+            // comboZona
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(61, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Tipo de Identificacion:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(167, 65);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 20);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Estado:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(112, 216);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 20);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Tipo de Sujeto:";
-            // 
-            // comboSubjType
-            // 
-            this.comboSubjType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboSubjType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboSubjType.FormattingEnabled = true;
-            this.comboSubjType.Items.AddRange(new object[] {
-            "Persona Natural",
-            "Persona Juridica"});
-            this.comboSubjType.Location = new System.Drawing.Point(314, 212);
-            this.comboSubjType.Margin = new System.Windows.Forms.Padding(4);
-            this.comboSubjType.Name = "comboSubjType";
-            this.comboSubjType.Size = new System.Drawing.Size(332, 28);
-            this.comboSubjType.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 165);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(314, 162);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(332, 26);
-            this.txtNombre.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 115);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Nº Identificacion:";
-            // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(314, 112);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(332, 26);
-            this.txtID.TabIndex = 33;
+            this.comboZona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboZona.FormattingEnabled = true;
+            this.comboZona.Items.AddRange(new object[] {
+            "Guayaquil",
+            "Ambato"});
+            this.comboZona.Location = new System.Drawing.Point(314, 161);
+            this.comboZona.Margin = new System.Windows.Forms.Padding(4);
+            this.comboZona.Name = "comboZona";
+            this.comboZona.Size = new System.Drawing.Size(332, 28);
+            this.comboZona.TabIndex = 37;
             // 
             // tableLayoutPanel5
             // 
@@ -463,14 +466,14 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // Cliente
+            // RegistroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 566);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Cliente";
+            this.Name = "RegistroCliente";
             this.Text = "Cliente";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -492,22 +495,22 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTipoID;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.ComboBox comboIDType;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboSubjType;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblZona;
+        private System.Windows.Forms.ComboBox comboZona;
+        private System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblDireccion;
         public System.Windows.Forms.TextBox txtTelf;
         public System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.RichTextBox txtDireccion;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnLimpiar;

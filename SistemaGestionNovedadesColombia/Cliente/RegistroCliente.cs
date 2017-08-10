@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaGestionNovedadesColombia
 {
-    public partial class Cliente : Form
+    public partial class RegistroCliente : Form
     {
-        public Cliente(String tipo)
+        public RegistroCliente(String tipo)
         {
             InitializeComponent();
             this.CenterToScreen();
@@ -24,6 +24,8 @@ namespace SistemaGestionNovedadesColombia
 
         private void initComponents(String tipo)
         {
+            txtID.MaxLength = 13;
+
             tableLayoutPanel1.RowStyles[0].SizeType = SizeType.Percent;
             tableLayoutPanel1.RowStyles[0].Height = 45;
             tableLayoutPanel1.RowStyles[1].SizeType = SizeType.Percent;
@@ -41,7 +43,7 @@ namespace SistemaGestionNovedadesColombia
             {
                 comboIDType.Enabled = false;
                 comboStatus.Enabled = false;
-                comboSubjType.Enabled = false;
+                comboZona.Enabled = false;
                 txtID.Enabled = false;
                 txtNombre.Enabled = false;
                 txtEmail.Enabled = false;
@@ -66,15 +68,20 @@ namespace SistemaGestionNovedadesColombia
             comboIDType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboStatus.SelectedIndex = 0;
             comboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboSubjType.SelectedIndex = 0;
-            comboSubjType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboZona.SelectedIndex = 0;
+            comboZona.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void validarRegistro()
+        {
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             comboIDType.SelectedIndex = 0;
             comboStatus.SelectedIndex = 0;
-            comboSubjType.SelectedIndex = 0;
+            comboZona.SelectedIndex = 0;
             txtID.Text = "";
             txtNombre.Text = "";
             txtEmail.Text = "";
@@ -84,7 +91,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cliente guardado con exito.", "Registro Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("RegistroCliente guardado con exito.", "Registro RegistroCliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnSalir.PerformClick();
         }
 
@@ -105,8 +112,40 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cliente eliminado con exito.", "Eliminacion Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("RegistroCliente eliminado con exito.", "Eliminacion RegistroCliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnSalir.PerformClick();
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void comboIDType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboIDType.SelectedIndex == 0)
+            {
+                txtID.MaxLength = 13;
+            }
+            else if (comboIDType.SelectedIndex == 1)
+            {
+                txtID.MaxLength = 10;
+            }
+            else
+            {
+                txtID.MaxLength = 0;
+            }
+        }
+
+        private void txtTelf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

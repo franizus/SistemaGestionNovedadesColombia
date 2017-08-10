@@ -9,7 +9,6 @@ C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColo
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.AboutBox1.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.MainWindow.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.IngresoSistema.resources
-C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.Cliente.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.BusquedaCliente.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.Facturacion.BusquedaFactura.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.Proveedor.BusquedaProveedor.resources
@@ -27,3 +26,4 @@ C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColo
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.Administracion.Parametros.Paramentros.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.Administracion.Usuario.BusquedaUsuario.resources
 C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.Administracion.Usuario.Usuario.resources
+C:\Users\frani\Documents\Visual Studio 2017\Projects\SistemaGestionNovedadesColombia\SistemaGestionNovedadesColombia\obj\Debug\SistemaGestionNovedadesColombia.RegistroCliente.resources

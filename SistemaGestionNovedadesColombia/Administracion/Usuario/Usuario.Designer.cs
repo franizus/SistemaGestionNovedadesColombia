@@ -248,7 +248,7 @@
             this.groupBox1.Size = new System.Drawing.Size(550, 133);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Cliente";
+            this.groupBox1.Text = "Datos del RegistroCliente";
             // 
             // tableLayoutPanel3
             // 
@@ -325,7 +325,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Cliente:";
+            this.label1.Text = "RegistroCliente:";
             // 
             // label3
             // 

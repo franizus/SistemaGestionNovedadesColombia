@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridViewCliente = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -40,7 +38,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -50,7 +48,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.gridViewCliente, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,36 +61,19 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(713, 346);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // dataGridView1
+            // gridViewCliente
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idNumber,
-            this.name});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(680, 186);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // idNumber
-            // 
-            this.idNumber.HeaderText = "No. de Identificacion";
-            this.idNumber.Name = "idNumber";
-            this.idNumber.ReadOnly = true;
-            this.idNumber.Width = 200;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Nombre";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 200;
+            this.gridViewCliente.AllowUserToAddRows = false;
+            this.gridViewCliente.AllowUserToDeleteRows = false;
+            this.gridViewCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewCliente.Location = new System.Drawing.Point(16, 99);
+            this.gridViewCliente.Name = "gridViewCliente";
+            this.gridViewCliente.ReadOnly = true;
+            this.gridViewCliente.RowTemplate.Height = 24;
+            this.gridViewCliente.Size = new System.Drawing.Size(680, 186);
+            this.gridViewCliente.TabIndex = 2;
+            this.gridViewCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // groupBox1
             // 
@@ -104,7 +85,6 @@
             this.groupBox1.Size = new System.Drawing.Size(707, 83);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar";
             // 
             // tableLayoutPanel3
             // 
@@ -191,9 +171,9 @@
             this.ClientSize = new System.Drawing.Size(713, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "BusquedaCliente";
-            this.Text = "Buscar Cliente";
+            this.Text = "Buscar RegistroCliente";
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCliente)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -205,13 +185,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridViewCliente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         public System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConsultar;

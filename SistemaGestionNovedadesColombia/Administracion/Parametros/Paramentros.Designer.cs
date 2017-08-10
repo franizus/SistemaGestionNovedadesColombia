@@ -172,7 +172,7 @@
             this.groupBox2.Size = new System.Drawing.Size(640, 64);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cliente por Defecto";
+            this.groupBox2.Text = "RegistroCliente por Defecto";
             // 
             // tableLayoutPanel4
             // 
@@ -210,7 +210,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 20);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Cliente por Defecto:";
+            this.label1.Text = "RegistroCliente por Defecto:";
             // 
             // groupBox3
             // 

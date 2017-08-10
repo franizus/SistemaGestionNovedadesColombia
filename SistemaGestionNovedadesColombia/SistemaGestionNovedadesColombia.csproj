@@ -78,6 +78,7 @@
     <Compile Include="Ayuda\AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConexionSQL.cs" />
     <Compile Include="Facturacion\BuscarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +133,11 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\Cliente.cs">
+    <Compile Include="Cliente\RegistroCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="Cliente\RegistroCliente.Designer.cs">
+      <DependentUpon>RegistroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente\BusquedaCliente.cs">
       <SubType>Form</SubType>
@@ -176,6 +177,12 @@
     <Compile Include="Proveedor\Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="SGIVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGIVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Validacion.cs" />
     <EmbeddedResource Include="Administracion\Parametros\GrupoTallaColor.resx">
       <DependentUpon>GrupoTallaColor.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,8 +225,8 @@
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\RegistroCliente.resx">
+      <DependentUpon>RegistroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\BusquedaCliente.resx">
       <DependentUpon>BusquedaCliente.cs</DependentUpon>
@@ -258,6 +265,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SGIVDataSet.xsc">
+      <DependentUpon>SGIVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGIVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGIVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGIVDataSet.xss">
+      <DependentUpon>SGIVDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

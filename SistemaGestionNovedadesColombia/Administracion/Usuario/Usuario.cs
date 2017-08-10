@@ -68,7 +68,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Usuario guardado con exito.", "Usuario Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Usuario guardado con exito.", "Usuario RegistroCliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             btnSalir.PerformClick();
         }
 
