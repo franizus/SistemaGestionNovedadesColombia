@@ -204,7 +204,7 @@ namespace SistemaGestionNovedadesColombia
 
             if (!string.IsNullOrWhiteSpace(txtEmail.Text) && !string.IsNullOrWhiteSpace(txtTelf.Text))
             {
-                if (!validarCorreo() && !validarTelefono())
+                if (!validarCorreo() || !validarTelefono())
                 {
                     temp = false;
                 }

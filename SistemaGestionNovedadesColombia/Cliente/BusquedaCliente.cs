@@ -61,11 +61,19 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            String idCliente = gridViewCliente.SelectedRows[0].Cells[0].Value.ToString();
-            RegistroCliente form = new RegistroCliente(tipo, idCliente);
-            form.Text = tipo + " Cliente";
-            form.Show();
-            btnSalir.PerformClick();
+            if (gridViewCliente.SelectedRows.Count > 1)
+            {
+                String idCliente = gridViewCliente.SelectedRows[0].Cells[0].Value.ToString();
+                RegistroCliente form = new RegistroCliente(tipo, idCliente);
+                form.Text = tipo + " Cliente";
+                form.Show();
+                btnSalir.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBusqueda.Clear();
+            }
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
