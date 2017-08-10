@@ -14,11 +14,12 @@ namespace SistemaGestionNovedadesColombia
     public partial class BusquedaCliente : Form
     {
         private String tipo;
-        ConexionSQL conexionSql = new ConexionSQL();
+        private ConexionSQL conexionSql;
 
         public BusquedaCliente()
         {
             InitializeComponent();
+            conexionSql = new ConexionSQL();
             MaximizeBox = false;
             MinimizeBox = false;
             initGridView();
@@ -32,7 +33,7 @@ namespace SistemaGestionNovedadesColombia
         private void initGridView()
         {
             conexionSql.Conectar();
-            string query = "select IDCLIENTE, NOMBRE from CLIENTE";
+            string query = "select * from ClienteZona";
             var dataAdapter = new SqlDataAdapter(query, conexionSql.getConnection());
             var commandBuilder = new SqlCommandBuilder(dataAdapter);
             var ds = new DataSet();
@@ -41,8 +42,8 @@ namespace SistemaGestionNovedadesColombia
             gridViewCliente.DataSource = ds.Tables[0];
             conexionSql.Desconectar();
 
-            gridViewCliente.Columns[0].HeaderText = "No. de Identificación";
-            gridViewCliente.Columns[1].HeaderText = "Nombre";
+            gridViewCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            gridViewCliente.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

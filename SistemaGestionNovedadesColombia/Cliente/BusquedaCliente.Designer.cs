@@ -48,9 +48,9 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.gridViewCliente, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.gridViewCliente, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -66,6 +66,7 @@
             this.gridViewCliente.AllowUserToAddRows = false;
             this.gridViewCliente.AllowUserToDeleteRows = false;
             this.gridViewCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridViewCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewCliente.Location = new System.Drawing.Point(16, 99);
             this.gridViewCliente.Name = "gridViewCliente";

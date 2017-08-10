@@ -182,6 +182,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SGIVDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SGIVDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Validacion.cs" />
     <EmbeddedResource Include="Administracion\Parametros\GrupoTallaColor.resx">
       <DependentUpon>GrupoTallaColor.cs</DependentUpon>
@@ -275,6 +280,17 @@
     </None>
     <None Include="SGIVDataSet.xss">
       <DependentUpon>SGIVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGIVDataSet1.xsc">
+      <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SGIVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGIVDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGIVDataSet1.xss">
+      <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
