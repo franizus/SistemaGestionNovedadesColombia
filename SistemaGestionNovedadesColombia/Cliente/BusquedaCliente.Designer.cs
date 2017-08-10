@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.gridViewCliente = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -37,11 +36,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.gridViewCliente = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -60,21 +60,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(713, 346);
             this.tableLayoutPanel2.TabIndex = 1;
-            // 
-            // gridViewCliente
-            // 
-            this.gridViewCliente.AllowUserToAddRows = false;
-            this.gridViewCliente.AllowUserToDeleteRows = false;
-            this.gridViewCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gridViewCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewCliente.Location = new System.Drawing.Point(16, 99);
-            this.gridViewCliente.Name = "gridViewCliente";
-            this.gridViewCliente.ReadOnly = true;
-            this.gridViewCliente.RowTemplate.Height = 24;
-            this.gridViewCliente.Size = new System.Drawing.Size(680, 186);
-            this.gridViewCliente.TabIndex = 2;
-            this.gridViewCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // groupBox1
             // 
@@ -111,6 +96,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(332, 26);
             this.txtBusqueda.TabIndex = 34;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // label2
             // 
@@ -165,6 +151,21 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // gridViewCliente
+            // 
+            this.gridViewCliente.AllowUserToAddRows = false;
+            this.gridViewCliente.AllowUserToDeleteRows = false;
+            this.gridViewCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridViewCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewCliente.Location = new System.Drawing.Point(16, 99);
+            this.gridViewCliente.Name = "gridViewCliente";
+            this.gridViewCliente.ReadOnly = true;
+            this.gridViewCliente.RowTemplate.Height = 24;
+            this.gridViewCliente.Size = new System.Drawing.Size(680, 186);
+            this.gridViewCliente.TabIndex = 2;
+            this.gridViewCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
             // BusquedaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,13 +173,13 @@
             this.ClientSize = new System.Drawing.Size(713, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "BusquedaCliente";
-            this.Text = "Buscar RegistroCliente";
+            this.Text = "Buscar Cliente";
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewCliente)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCliente)).EndInit();
             this.ResumeLayout(false);
 
         }

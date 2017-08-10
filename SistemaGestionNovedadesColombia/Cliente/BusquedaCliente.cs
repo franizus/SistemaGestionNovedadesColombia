@@ -63,5 +63,10 @@ namespace SistemaGestionNovedadesColombia
             form.Show();
             btnSalir.PerformClick();
         }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

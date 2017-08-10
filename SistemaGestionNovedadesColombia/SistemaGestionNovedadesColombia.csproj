@@ -177,11 +177,6 @@
     <Compile Include="Proveedor\Proveedor.Designer.cs">
       <DependentUpon>Proveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="SGIVDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SGIVDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SGIVDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -270,17 +265,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SGIVDataSet.xsc">
-      <DependentUpon>SGIVDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SGIVDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SGIVDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SGIVDataSet.xss">
-      <DependentUpon>SGIVDataSet.xsd</DependentUpon>
-    </None>
     <None Include="SGIVDataSet1.xsc">
       <DependentUpon>SGIVDataSet1.xsd</DependentUpon>
     </None>
