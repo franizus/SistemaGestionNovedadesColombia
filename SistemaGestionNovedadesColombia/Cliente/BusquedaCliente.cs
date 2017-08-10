@@ -23,6 +23,7 @@ namespace SistemaGestionNovedadesColombia
             MaximizeBox = false;
             MinimizeBox = false;
             initGridView();
+            comboBusqueda.SelectedIndex = 0;
         }
 
         public void setTipo(String tipo)
@@ -36,10 +37,12 @@ namespace SistemaGestionNovedadesColombia
             string query = "select * from ClienteZona";
             var dataAdapter = new SqlDataAdapter(query, conexionSql.getConnection());
             var commandBuilder = new SqlCommandBuilder(dataAdapter);
-            var ds = new DataSet();
+            var ds = new DataTable();
             dataAdapter.Fill(ds);
+            BindingSource bsSource = new BindingSource();
+            bsSource.DataSource = ds;
             gridViewCliente.ReadOnly = true;
-            gridViewCliente.DataSource = ds.Tables[0];
+            gridViewCliente.DataSource = bsSource;
             conexionSql.Desconectar();
 
             gridViewCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -58,7 +61,8 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            RegistroCliente form = new RegistroCliente(tipo);
+            String idCliente = gridViewCliente.SelectedRows[0].Cells[0].Value.ToString();
+            RegistroCliente form = new RegistroCliente(tipo, idCliente);
             form.Text = tipo + " Cliente";
             form.Show();
             btnSalir.PerformClick();
@@ -66,7 +70,10 @@ namespace SistemaGestionNovedadesColombia
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-
+            var bd = (BindingSource)gridViewCliente.DataSource;
+            var dt = (DataTable)bd.DataSource;
+            dt.DefaultView.RowFilter = string.Format(gridViewCliente.Columns[comboBusqueda.SelectedIndex].DataPropertyName + " like '%{0}%'", txtBusqueda.Text.Trim().Replace("'", "''"));
+            gridViewCliente.Refresh();
         }
     }
 }

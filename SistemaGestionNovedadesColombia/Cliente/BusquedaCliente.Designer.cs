@@ -33,6 +33,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.comboBusqueda = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
@@ -74,16 +75,18 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.80171F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.19829F));
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.Controls.Add(this.txtBusqueda, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.comboBusqueda, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 26);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(701, 54);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -91,10 +94,10 @@
             // 
             this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(320, 14);
+            this.txtBusqueda.Location = new System.Drawing.Point(215, 14);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(5);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(332, 26);
+            this.txtBusqueda.Size = new System.Drawing.Size(270, 26);
             this.txtBusqueda.TabIndex = 34;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
@@ -103,12 +106,27 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 17);
+            this.label2.Location = new System.Drawing.Point(16, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 20);
             this.label2.TabIndex = 31;
             this.label2.Text = "Termino de Busqueda:";
+            // 
+            // comboBusqueda
+            // 
+            this.comboBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBusqueda.FormattingEnabled = true;
+            this.comboBusqueda.Items.AddRange(new object[] {
+            "Identificación",
+            "Nombre",
+            "Zona"});
+            this.comboBusqueda.Location = new System.Drawing.Point(509, 14);
+            this.comboBusqueda.Name = "comboBusqueda";
+            this.comboBusqueda.Size = new System.Drawing.Size(172, 26);
+            this.comboBusqueda.TabIndex = 35;
             // 
             // tableLayoutPanel1
             // 
@@ -162,6 +180,7 @@
             this.gridViewCliente.Name = "gridViewCliente";
             this.gridViewCliente.ReadOnly = true;
             this.gridViewCliente.RowTemplate.Height = 24;
+            this.gridViewCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridViewCliente.Size = new System.Drawing.Size(680, 186);
             this.gridViewCliente.TabIndex = 2;
             this.gridViewCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -195,5 +214,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.ComboBox comboBusqueda;
     }
 }

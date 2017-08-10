@@ -33,7 +33,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroCliente form = new RegistroCliente("Registrar");
+            RegistroCliente form = new RegistroCliente("Registrar", "");
             form.Text = "Registrar Cliente";
             form.Show();
         }

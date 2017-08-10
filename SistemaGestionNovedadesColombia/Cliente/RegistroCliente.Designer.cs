@@ -303,6 +303,7 @@
             // comboIDType
             // 
             this.comboIDType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboIDType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboIDType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboIDType.FormattingEnabled = true;
             this.comboIDType.Items.AddRange(new object[] {
@@ -400,6 +401,7 @@
             // comboZona
             // 
             this.comboZona.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboZona.FormattingEnabled = true;
             this.comboZona.Location = new System.Drawing.Point(314, 161);

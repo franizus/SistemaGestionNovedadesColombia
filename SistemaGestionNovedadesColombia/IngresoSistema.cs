@@ -28,6 +28,18 @@ namespace SistemaGestionNovedadesColombia
                 mw.Closed += (s, args) => this.Close();
                 mw.Show();
             }
+            else if (string.IsNullOrWhiteSpace(txtContrasenia.Text) && !string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                MessageBox.Show("El campo de contraseña esta vacio.", "Error Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(txtUsuario.Text) && !string.IsNullOrWhiteSpace(txtContrasenia.Text))
+            {
+                MessageBox.Show("El campo de usuario esta vacio.", "Error Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (string.IsNullOrWhiteSpace(txtContrasenia.Text) && string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                MessageBox.Show("Campos vacios.", "Error Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 MessageBox.Show("El usuario o contraseña son incorrectos.", "Error Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
