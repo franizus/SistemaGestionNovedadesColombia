@@ -30,6 +30,10 @@
         {
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -37,10 +41,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.idNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -84,6 +84,32 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // idNumber
+            // 
+            this.idNumber.HeaderText = "Numero";
+            this.idNumber.Name = "idNumber";
+            this.idNumber.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Fecha";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // nombreCliente
+            // 
+            this.nombreCliente.HeaderText = "Nombre RegistroCliente";
+            this.nombreCliente.Name = "nombreCliente";
+            this.nombreCliente.ReadOnly = true;
+            this.nombreCliente.Width = 200;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total Factura";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.Width = 150;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
@@ -94,7 +120,6 @@
             this.groupBox1.Size = new System.Drawing.Size(647, 90);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar";
             // 
             // tableLayoutPanel3
             // 
@@ -173,32 +198,6 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
-            // 
-            // idNumber
-            // 
-            this.idNumber.HeaderText = "Numero";
-            this.idNumber.Name = "idNumber";
-            this.idNumber.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Fecha";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // nombreCliente
-            // 
-            this.nombreCliente.HeaderText = "Nombre RegistroCliente";
-            this.nombreCliente.Name = "nombreCliente";
-            this.nombreCliente.ReadOnly = true;
-            this.nombreCliente.Width = 200;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total Factura";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.Width = 150;
             // 
             // BusquedaFactura
             // 

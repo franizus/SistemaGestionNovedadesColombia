@@ -104,7 +104,6 @@
             this.groupBox1.Size = new System.Drawing.Size(707, 83);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar";
             // 
             // tableLayoutPanel3
             // 
@@ -191,7 +190,7 @@
             this.ClientSize = new System.Drawing.Size(713, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "BusquedaPersona";
-            this.Text = "Busqueda Personal";
+            this.Text = "Busqueda Vendedor";
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

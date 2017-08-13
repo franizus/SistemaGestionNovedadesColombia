@@ -1,6 +1,6 @@
 ﻿namespace SistemaGestionNovedadesColombia
 {
-    partial class RegistroCliente
+    partial class Cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -44,16 +44,18 @@
             this.txtDireccion = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboCiudad = new System.Windows.Forms.ComboBox();
+            this.comboProvincia = new System.Windows.Forms.ComboBox();
             this.comboIDType = new System.Windows.Forms.ComboBox();
             this.lblTipoID = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.lblContacto = new System.Windows.Forms.Label();
-            this.lblZona = new System.Windows.Forms.Label();
-            this.comboZona = new System.Windows.Forms.ComboBox();
             this.txtContacto = new System.Windows.Forms.TextBox();
+            this.lblZona = new System.Windows.Forms.Label();
+            this.lblContacto = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir2 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -63,6 +65,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -278,16 +281,16 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 1, 4);
             this.tableLayoutPanel3.Controls.Add(this.comboIDType, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblTipoID, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblID, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lblNombre, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.txtID, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtNombre, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lblContacto, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lblZona, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.comboZona, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtContacto, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.txtContacto, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lblZona, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.lblContacto, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 24);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -299,6 +302,46 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(722, 253);
             this.tableLayoutPanel3.TabIndex = 34;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.comboCiudad, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.comboProvincia, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(241, 203);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(478, 47);
+            this.tableLayoutPanel6.TabIndex = 40;
+            // 
+            // comboCiudad
+            // 
+            this.comboCiudad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboCiudad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCiudad.FormattingEnabled = true;
+            this.comboCiudad.Location = new System.Drawing.Point(245, 11);
+            this.comboCiudad.Margin = new System.Windows.Forms.Padding(4);
+            this.comboCiudad.Name = "comboCiudad";
+            this.comboCiudad.Size = new System.Drawing.Size(226, 24);
+            this.comboCiudad.TabIndex = 39;
+            // 
+            // comboProvincia
+            // 
+            this.comboProvincia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboProvincia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboProvincia.FormattingEnabled = true;
+            this.comboProvincia.Location = new System.Drawing.Point(12, 10);
+            this.comboProvincia.Margin = new System.Windows.Forms.Padding(4);
+            this.comboProvincia.Name = "comboProvincia";
+            this.comboProvincia.Size = new System.Drawing.Size(215, 26);
+            this.comboProvincia.TabIndex = 38;
+            this.comboProvincia.SelectedIndexChanged += new System.EventHandler(this.comboProvincia_SelectedIndexChanged_1);
             // 
             // comboIDType
             // 
@@ -374,51 +417,39 @@
             this.txtNombre.Size = new System.Drawing.Size(332, 26);
             this.txtNombre.TabIndex = 35;
             // 
-            // lblContacto
+            // txtContacto
             // 
-            this.lblContacto.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblContacto.AutoSize = true;
-            this.lblContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContacto.Location = new System.Drawing.Point(152, 216);
-            this.lblContacto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblContacto.Name = "lblContacto";
-            this.lblContacto.Size = new System.Drawing.Size(81, 20);
-            this.lblContacto.TabIndex = 30;
-            this.lblContacto.Text = "Contacto:";
+            this.txtContacto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContacto.Location = new System.Drawing.Point(314, 162);
+            this.txtContacto.Margin = new System.Windows.Forms.Padding(5);
+            this.txtContacto.Name = "txtContacto";
+            this.txtContacto.Size = new System.Drawing.Size(332, 26);
+            this.txtContacto.TabIndex = 38;
             // 
             // lblZona
             // 
             this.lblZona.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblZona.AutoSize = true;
             this.lblZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZona.Location = new System.Drawing.Point(183, 165);
+            this.lblZona.Location = new System.Drawing.Point(183, 216);
             this.lblZona.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblZona.Name = "lblZona";
             this.lblZona.Size = new System.Drawing.Size(50, 20);
             this.lblZona.TabIndex = 36;
             this.lblZona.Text = "Zona:";
             // 
-            // comboZona
+            // lblContacto
             // 
-            this.comboZona.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboZona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboZona.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboZona.FormattingEnabled = true;
-            this.comboZona.Location = new System.Drawing.Point(314, 161);
-            this.comboZona.Margin = new System.Windows.Forms.Padding(4);
-            this.comboZona.Name = "comboZona";
-            this.comboZona.Size = new System.Drawing.Size(332, 28);
-            this.comboZona.TabIndex = 37;
-            // 
-            // txtContacto
-            // 
-            this.txtContacto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContacto.Location = new System.Drawing.Point(314, 213);
-            this.txtContacto.Margin = new System.Windows.Forms.Padding(5);
-            this.txtContacto.Name = "txtContacto";
-            this.txtContacto.Size = new System.Drawing.Size(332, 26);
-            this.txtContacto.TabIndex = 38;
+            this.lblContacto.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblContacto.AutoSize = true;
+            this.lblContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContacto.Location = new System.Drawing.Point(152, 165);
+            this.lblContacto.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblContacto.Name = "lblContacto";
+            this.lblContacto.Size = new System.Drawing.Size(81, 20);
+            this.lblContacto.TabIndex = 30;
+            this.lblContacto.Text = "Contacto:";
             // 
             // tableLayoutPanel5
             // 
@@ -461,14 +492,14 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // RegistroCliente
+            // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 566);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "RegistroCliente";
+            this.Name = "Cliente";
             this.Text = "Cliente";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -478,6 +509,7 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -493,7 +525,6 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.ComboBox comboIDType;
         private System.Windows.Forms.Label lblZona;
-        private System.Windows.Forms.ComboBox comboZona;
         private System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.TextBox txtID;
@@ -514,5 +545,8 @@
         private System.Windows.Forms.Button btnSalir2;
         private System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.TextBox txtContacto;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.ComboBox comboCiudad;
+        private System.Windows.Forms.ComboBox comboProvincia;
     }
 }

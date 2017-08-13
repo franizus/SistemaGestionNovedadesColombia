@@ -19,7 +19,7 @@ namespace SistemaGestionNovedadesColombia.Facturacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RegistroCliente c = new RegistroCliente("Registrar", "");
+            Cliente c = new Cliente("Registrar", "");
             c.Text = "Registrar Cliente";
             c.Show();
         }

@@ -35,6 +35,9 @@
     <StartupObject>SistemaGestionNovedadesColombia.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChreneLib">
+      <HintPath>E:\Downloads\Compressed\ChreneLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,17 +57,23 @@
     <Compile Include="Administracion\Parametros\GrupoTallaColor.Designer.cs">
       <DependentUpon>GrupoTallaColor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administracion\Parametros\Paramentros.cs">
+    <Compile Include="Administracion\Parametros\Parametros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administracion\Parametros\Paramentros.Designer.cs">
-      <DependentUpon>Paramentros.cs</DependentUpon>
+    <Compile Include="Administracion\Parametros\Parametros.Designer.cs">
+      <DependentUpon>Parametros.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Usuario\BusquedaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administracion\Usuario\BusquedaUsuario.Designer.cs">
       <DependentUpon>BusquedaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Usuario\MUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\Usuario\MUsuario.Designer.cs">
+      <DependentUpon>MUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Usuario\Usuario.cs">
       <SubType>Form</SubType>
@@ -133,11 +142,11 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente\RegistroCliente.cs">
+    <Compile Include="Cliente\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente\RegistroCliente.Designer.cs">
-      <DependentUpon>RegistroCliente.cs</DependentUpon>
+    <Compile Include="Cliente\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente\BusquedaCliente.cs">
       <SubType>Form</SubType>
@@ -151,17 +160,17 @@
     <Compile Include="IngresoSistema.Designer.cs">
       <DependentUpon>IngresoSistema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personal\BusquedaPersona.cs">
+    <Compile Include="Vendedor\BusquedaVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personal\BusquedaPersona.Designer.cs">
-      <DependentUpon>BusquedaPersona.cs</DependentUpon>
+    <Compile Include="Vendedor\BusquedaVendedor.Designer.cs">
+      <DependentUpon>BusquedaVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personal\Personal.cs">
+    <Compile Include="Vendedor\Vendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personal\Personal.Designer.cs">
-      <DependentUpon>Personal.cs</DependentUpon>
+    <Compile Include="Vendedor\Vendedor.Designer.cs">
+      <DependentUpon>Vendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -186,11 +195,14 @@
     <EmbeddedResource Include="Administracion\Parametros\GrupoTallaColor.resx">
       <DependentUpon>GrupoTallaColor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administracion\Parametros\Paramentros.resx">
-      <DependentUpon>Paramentros.cs</DependentUpon>
+    <EmbeddedResource Include="Administracion\Parametros\Parametros.resx">
+      <DependentUpon>Parametros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Usuario\BusquedaUsuario.resx">
       <DependentUpon>BusquedaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\Usuario\MUsuario.resx">
+      <DependentUpon>MUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administracion\Usuario\Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
@@ -225,8 +237,8 @@
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente\RegistroCliente.resx">
-      <DependentUpon>RegistroCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente\BusquedaCliente.resx">
       <DependentUpon>BusquedaCliente.cs</DependentUpon>
@@ -234,11 +246,11 @@
     <EmbeddedResource Include="IngresoSistema.resx">
       <DependentUpon>IngresoSistema.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personal\BusquedaPersona.resx">
-      <DependentUpon>BusquedaPersona.cs</DependentUpon>
+    <EmbeddedResource Include="Vendedor\BusquedaVendedor.resx">
+      <DependentUpon>BusquedaVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personal\Personal.resx">
-      <DependentUpon>Personal.cs</DependentUpon>
+    <EmbeddedResource Include="Vendedor\Vendedor.resx">
+      <DependentUpon>Vendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

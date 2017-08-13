@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace SistemaGestionNovedadesColombia
 {
-    public partial class RegistroCliente : Form
+    public partial class Cliente : Form
     {
         private ConexionSQL conexionSql;
         private bool modificar;
 
-        public RegistroCliente(String tipo, String idCliente)
+        public Cliente(string tipo, string idCliente)
         {
             InitializeComponent();
             conexionSql = new ConexionSQL();
@@ -27,27 +27,44 @@ namespace SistemaGestionNovedadesColombia
             initComponents(tipo, idCliente);
         }
 
-        private void fillComboZona()
+        private void fillComboProvincia()
         {
             conexionSql.Conectar();
-            string query = "select * from ZonaCiudadProvincia";
-            SqlCommand sqlCmd = new SqlCommand("SELECT * FROM ZonaCiudadProvincia", conexionSql.getConnection());
+            string query = "select PROVINCIA from ZONA group by PROVINCIA";
+            SqlCommand sqlCmd = new SqlCommand(query, conexionSql.getConnection());
             SqlDataReader sqlReader = sqlCmd.ExecuteReader();
-
             while (sqlReader.Read())
             {
-                comboZona.Items.Add(sqlReader["Zona"].ToString());
+                comboProvincia.Items.Add(sqlReader["PROVINCIA"].ToString());
             }
 
             sqlReader.Close();
             conexionSql.Desconectar();
         }
 
-        private void initComponents(String tipo, String idCliente)
+        private void fillComboCiudad()
+        {
+            comboCiudad.Items.Clear();
+            conexionSql.Conectar();
+            string query = "select CIUDAD from ZONA where PROVINCIA = '" + comboProvincia.SelectedItem.ToString() + "' order by CIUDAD";
+            SqlCommand sqlCmd = new SqlCommand(query, conexionSql.getConnection());
+            SqlDataReader sqlReader = sqlCmd.ExecuteReader();
+
+            while (sqlReader.Read())
+            {
+                comboCiudad.Items.Add(sqlReader["CIUDAD"].ToString());
+            }
+
+            sqlReader.Close();
+            conexionSql.Desconectar();
+            comboCiudad.SelectedIndex = 0;
+        }
+
+        private void initComponents(string tipo, string idCliente)
         {
             txtID.MaxLength = 13;
             txtTelf.MaxLength = 10;
-            fillComboZona();
+            fillComboProvincia();
 
             tableLayoutPanel1.RowStyles[0].SizeType = SizeType.Percent;
             tableLayoutPanel1.RowStyles[0].Height = 45;
@@ -66,7 +83,8 @@ namespace SistemaGestionNovedadesColombia
                 if (tipo.Equals("Registrar"))
                 {
                     comboIDType.SelectedIndex = 0;
-                    comboZona.SelectedIndex = 0;
+                    comboProvincia.SelectedIndex = 0;
+                    fillComboCiudad();
                 }
 
                 tableLayoutPanel1.RowStyles[2].SizeType = SizeType.Percent;
@@ -84,7 +102,7 @@ namespace SistemaGestionNovedadesColombia
                 }
 
                 comboIDType.Enabled = false;
-                comboZona.Enabled = false;
+                comboProvincia.Enabled = false;
                 txtID.Enabled = false;
                 txtNombre.Enabled = false;
                 txtEmail.Enabled = false;
@@ -110,27 +128,48 @@ namespace SistemaGestionNovedadesColombia
         private void fillForm()
         {
             conexionSql.Conectar();
-            SqlCommand cmd = new SqlCommand("select * from CLIENTE where IDCLIENTE = '" + txtID.Text + "'", conexionSql.getConnection());
+            SqlCommand cmd = new SqlCommand("select * from ClienteYZona where IDCLIENTE = '" + txtID.Text + "'", conexionSql.getConnection());
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                txtNombre.Text = reader.GetString(3);
-                txtDireccion.Text = reader.GetString(7);
-                comboIDType.SelectedItem = reader.GetString(2);
-                comboZona.SelectedIndex = reader.GetInt32(1) - 1;
+                txtNombre.Text = reader.GetString(2);
+                txtDireccion.Text = reader.GetString(6);
+                comboIDType.SelectedItem = reader.GetString(1);
+                comboProvincia.SelectedItem = reader.GetString(8);
+                fillComboCiudad();
+                comboCiudad.SelectedItem = reader.GetString(7);
+                if (!reader.IsDBNull(3))
+                {
+                    txtContacto.Text = reader.GetString(3);
+                }
                 if (!reader.IsDBNull(4))
                 {
-                    txtContacto.Text = reader.GetString(4);
+                    txtTelf.Text = reader.GetString(4);
                 }
                 if (!reader.IsDBNull(5))
                 {
-                    txtTelf.Text = reader.GetString(5);
-                }
-                if (!reader.IsDBNull(6))
-                {
-                    txtEmail.Text = reader.GetString(6);
+                    txtEmail.Text = reader.GetString(5);
                 }
             }
+            conexionSql.Desconectar();
+        }
+
+        private int getIDZona()
+        {
+            String provincia = comboProvincia.SelectedItem.ToString();
+            String ciudad = comboCiudad.SelectedItem.ToString();
+            int idZona = 0;
+
+            conexionSql.Conectar();
+            SqlCommand cmd = new SqlCommand("select IDZONA from ZONA where PROVINCIA = '" + provincia + "' AND CIUDAD = '" + ciudad + "'", conexionSql.getConnection());
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                idZona = reader.GetInt32(0);
+            }
+            conexionSql.Desconectar();
+
+            return idZona;
         }
 
         private bool validarRegistro()
@@ -252,7 +291,8 @@ namespace SistemaGestionNovedadesColombia
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             comboIDType.SelectedIndex = 0;
-            comboZona.SelectedIndex = 0;
+            comboProvincia.SelectedIndex = 0;
+            fillComboCiudad();
             txtID.Clear();
             txtNombre.Clear();
             txtEmail.Clear();
@@ -268,7 +308,7 @@ namespace SistemaGestionNovedadesColombia
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@IDCLIENTE", SqlDbType.VarChar).Value = txtID.Text;
-            cmd.Parameters.Add("@IDZONA", SqlDbType.Int).Value = comboZona.SelectedIndex + 1;
+            cmd.Parameters.Add("@IDZONA", SqlDbType.Int).Value = getIDZona();
             cmd.Parameters.Add("@TIPOID", SqlDbType.VarChar).Value = comboIDType.Text;
             cmd.Parameters.Add("@NOMBRE", SqlDbType.VarChar).Value = txtNombre.Text;
             cmd.Parameters.Add("@DIRECCION", SqlDbType.VarChar).Value = txtDireccion.Text;
@@ -333,7 +373,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea Cancelar?", "Cancelar", MessageBoxButtons.YesNo,
+            if (MessageBox.Show("¿Está seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
@@ -375,6 +415,14 @@ namespace SistemaGestionNovedadesColombia
             if (modificar)
             {
                 txtID.Enabled = true;
+                if (comboIDType.SelectedIndex == 1)
+                {
+                    txtID.Text = txtID.Text.Substring(0, 10);
+                }
+                else if (comboIDType.SelectedIndex == 2)
+                {
+                    txtID.Text = "";
+                }
             }
 
             if (comboIDType.SelectedIndex == 0)
@@ -397,6 +445,11 @@ namespace SistemaGestionNovedadesColombia
             {
                 e.Handled = true;
             }
+        }
+
+        private void comboProvincia_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            fillComboCiudad();
         }
     }
 }

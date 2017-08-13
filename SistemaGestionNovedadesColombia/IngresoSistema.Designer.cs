@@ -174,8 +174,8 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.btnCancelar, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnIngresar, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnCancelar, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 283);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -188,7 +188,7 @@
             // 
             this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnIngresar.Location = new System.Drawing.Point(388, 10);
+            this.btnIngresar.Location = new System.Drawing.Point(84, 10);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(136, 48);
@@ -201,7 +201,7 @@
             // 
             this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnCancelar.Location = new System.Drawing.Point(84, 10);
+            this.btnCancelar.Location = new System.Drawing.Point(388, 10);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 48);

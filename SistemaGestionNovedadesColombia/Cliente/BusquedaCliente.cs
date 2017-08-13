@@ -36,7 +36,6 @@ namespace SistemaGestionNovedadesColombia
             conexionSql.Conectar();
             string query = "select * from ClienteZona";
             var dataAdapter = new SqlDataAdapter(query, conexionSql.getConnection());
-            var commandBuilder = new SqlCommandBuilder(dataAdapter);
             var ds = new DataTable();
             dataAdapter.Fill(ds);
             BindingSource bsSource = new BindingSource();
@@ -61,10 +60,10 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (gridViewCliente.SelectedRows.Count > 1)
+            if (gridViewCliente.SelectedRows.Count >= 1)
             {
                 String idCliente = gridViewCliente.SelectedRows[0].Cells[0].Value.ToString();
-                RegistroCliente form = new RegistroCliente(tipo, idCliente);
+                Cliente form = new Cliente(tipo, idCliente);
                 form.Text = tipo + " Cliente";
                 form.Show();
                 btnSalir.PerformClick();
