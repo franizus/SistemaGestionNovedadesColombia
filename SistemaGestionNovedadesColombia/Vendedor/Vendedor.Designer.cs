@@ -604,6 +604,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(332, 26);
             this.txtNombre.TabIndex = 35;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label5
             // 
@@ -675,6 +676,7 @@
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(332, 26);
             this.txtCod.TabIndex = 40;
+            this.txtCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCod_KeyPress);
             // 
             // Personal
             // 
