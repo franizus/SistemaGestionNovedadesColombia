@@ -61,15 +61,15 @@
             this.numericHastaN5 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboStatus = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtCod = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -254,7 +254,7 @@
             0});
             this.numericDesdeN5.Name = "numericDesdeN5";
             this.numericDesdeN5.Size = new System.Drawing.Size(113, 29);
-            this.numericDesdeN5.TabIndex = 72;
+            this.numericDesdeN5.TabIndex = 53;
             // 
             // numericPorcentajeN5
             // 
@@ -262,7 +262,7 @@
             this.numericPorcentajeN5.Location = new System.Drawing.Point(600, 208);
             this.numericPorcentajeN5.Name = "numericPorcentajeN5";
             this.numericPorcentajeN5.Size = new System.Drawing.Size(90, 29);
-            this.numericPorcentajeN5.TabIndex = 59;
+            this.numericPorcentajeN5.TabIndex = 55;
             // 
             // numericPorcentajeN3
             // 
@@ -270,7 +270,7 @@
             this.numericPorcentajeN3.Location = new System.Drawing.Point(600, 125);
             this.numericPorcentajeN3.Name = "numericPorcentajeN3";
             this.numericPorcentajeN3.Size = new System.Drawing.Size(90, 29);
-            this.numericPorcentajeN3.TabIndex = 57;
+            this.numericPorcentajeN3.TabIndex = 49;
             // 
             // numericPorcentajeN2
             // 
@@ -278,7 +278,7 @@
             this.numericPorcentajeN2.Location = new System.Drawing.Point(600, 85);
             this.numericPorcentajeN2.Name = "numericPorcentajeN2";
             this.numericPorcentajeN2.Size = new System.Drawing.Size(90, 29);
-            this.numericPorcentajeN2.TabIndex = 56;
+            this.numericPorcentajeN2.TabIndex = 45;
             // 
             // label10
             // 
@@ -298,7 +298,7 @@
             this.numericPorcentajeN1.Location = new System.Drawing.Point(600, 45);
             this.numericPorcentajeN1.Name = "numericPorcentajeN1";
             this.numericPorcentajeN1.Size = new System.Drawing.Size(90, 29);
-            this.numericPorcentajeN1.TabIndex = 55;
+            this.numericPorcentajeN1.TabIndex = 42;
             // 
             // label6
             // 
@@ -318,7 +318,7 @@
             this.numericPorcentajeN4.Location = new System.Drawing.Point(600, 165);
             this.numericPorcentajeN4.Name = "numericPorcentajeN4";
             this.numericPorcentajeN4.Size = new System.Drawing.Size(90, 29);
-            this.numericPorcentajeN4.TabIndex = 58;
+            this.numericPorcentajeN4.TabIndex = 52;
             // 
             // label9
             // 
@@ -404,7 +404,7 @@
             0});
             this.numericDesdeN1.Name = "numericDesdeN1";
             this.numericDesdeN1.Size = new System.Drawing.Size(113, 29);
-            this.numericDesdeN1.TabIndex = 63;
+            this.numericDesdeN1.TabIndex = 40;
             // 
             // numericDesdeN2
             // 
@@ -418,7 +418,7 @@
             0});
             this.numericDesdeN2.Name = "numericDesdeN2";
             this.numericDesdeN2.Size = new System.Drawing.Size(113, 29);
-            this.numericDesdeN2.TabIndex = 64;
+            this.numericDesdeN2.TabIndex = 43;
             // 
             // numericDesdeN3
             // 
@@ -432,7 +432,7 @@
             0});
             this.numericDesdeN3.Name = "numericDesdeN3";
             this.numericDesdeN3.Size = new System.Drawing.Size(113, 29);
-            this.numericDesdeN3.TabIndex = 65;
+            this.numericDesdeN3.TabIndex = 47;
             // 
             // numericDesdeN4
             // 
@@ -446,7 +446,7 @@
             0});
             this.numericDesdeN4.Name = "numericDesdeN4";
             this.numericDesdeN4.Size = new System.Drawing.Size(113, 29);
-            this.numericDesdeN4.TabIndex = 66;
+            this.numericDesdeN4.TabIndex = 50;
             // 
             // numericHastaN1
             // 
@@ -460,7 +460,7 @@
             0});
             this.numericHastaN1.Name = "numericHastaN1";
             this.numericHastaN1.Size = new System.Drawing.Size(113, 29);
-            this.numericHastaN1.TabIndex = 67;
+            this.numericHastaN1.TabIndex = 41;
             // 
             // numericHastaN2
             // 
@@ -474,7 +474,7 @@
             0});
             this.numericHastaN2.Name = "numericHastaN2";
             this.numericHastaN2.Size = new System.Drawing.Size(113, 29);
-            this.numericHastaN2.TabIndex = 68;
+            this.numericHastaN2.TabIndex = 44;
             // 
             // numericHastaN3
             // 
@@ -488,7 +488,7 @@
             0});
             this.numericHastaN3.Name = "numericHastaN3";
             this.numericHastaN3.Size = new System.Drawing.Size(113, 29);
-            this.numericHastaN3.TabIndex = 69;
+            this.numericHastaN3.TabIndex = 48;
             // 
             // numericHastaN4
             // 
@@ -502,7 +502,7 @@
             0});
             this.numericHastaN4.Name = "numericHastaN4";
             this.numericHastaN4.Size = new System.Drawing.Size(113, 29);
-            this.numericHastaN4.TabIndex = 70;
+            this.numericHastaN4.TabIndex = 51;
             // 
             // numericHastaN5
             // 
@@ -516,7 +516,7 @@
             0});
             this.numericHastaN5.Name = "numericHastaN5";
             this.numericHastaN5.Size = new System.Drawing.Size(113, 29);
-            this.numericHastaN5.TabIndex = 71;
+            this.numericHastaN5.TabIndex = 54;
             // 
             // groupBox1
             // 
@@ -560,74 +560,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(722, 253);
             this.tableLayoutPanel3.TabIndex = 34;
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 65);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "No. de Identificación:";
-            // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(314, 62);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(332, 26);
-            this.txtID.TabIndex = 33;
-            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 115);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(314, 112);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(332, 26);
-            this.txtNombre.TabIndex = 35;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(147, 165);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 20);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Dirección:";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(314, 162);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(5);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(332, 26);
-            this.txtDireccion.TabIndex = 38;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -639,18 +571,6 @@
             this.label4.Size = new System.Drawing.Size(66, 20);
             this.label4.TabIndex = 30;
             this.label4.Text = "Estado:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(167, 15);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Código:";
             // 
             // comboStatus
             // 
@@ -667,6 +587,86 @@
             this.comboStatus.Size = new System.Drawing.Size(331, 28);
             this.comboStatus.TabIndex = 31;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(147, 165);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Dirección:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(160, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Nombre:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(56, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Cédula de Ciudadanía:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(167, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Código:";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(314, 162);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(332, 26);
+            this.txtDireccion.TabIndex = 38;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(314, 112);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(332, 26);
+            this.txtNombre.TabIndex = 35;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(314, 62);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(332, 26);
+            this.txtID.TabIndex = 33;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
+            // 
             // txtCod
             // 
             this.txtCod.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -675,7 +675,7 @@
             this.txtCod.Margin = new System.Windows.Forms.Padding(5);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(332, 26);
-            this.txtCod.TabIndex = 40;
+            this.txtCod.TabIndex = 31;
             this.txtCod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCod_KeyPress);
             // 
             // Personal
@@ -730,6 +730,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtCod;
         public System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.NumericUpDown numericPorcentajeN5;
@@ -747,7 +748,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtDireccion;
-        public System.Windows.Forms.TextBox txtCod;
         private System.Windows.Forms.NumericUpDown numericDesdeN5;
         private System.Windows.Forms.NumericUpDown numericDesdeN1;
         private System.Windows.Forms.NumericUpDown numericDesdeN2;

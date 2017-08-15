@@ -82,5 +82,25 @@ namespace SistemaGestionNovedadesColombia.Personal
             dt.DefaultView.RowFilter = string.Format(gridViewVendedor.Columns[comboBusqueda.SelectedIndex].DataPropertyName + " like '%{0}%'", txtBusqueda.Text.Trim().Replace("'", "''"));
             gridViewVendedor.Refresh();
         }
+
+        private void txtBusqueda_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (gridViewVendedor.SelectedRows.Count >= 1)
+                {
+                    String idVendedor = gridViewVendedor.SelectedRows[0].Cells[0].Value.ToString();
+                    Personal form = new Personal(tipo, idVendedor);
+                    form.Text = tipo + " Vendedor";
+                    form.Show();
+                    btnSalir.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Vendedor no registrado en el sistema.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtBusqueda.Clear();
+                }
+            }
+        }
     }
 }

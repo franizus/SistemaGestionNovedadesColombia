@@ -115,6 +115,7 @@
             this.txtBusqueda.Size = new System.Drawing.Size(270, 26);
             this.txtBusqueda.TabIndex = 34;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
+            this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
             // 
             // label2
             // 

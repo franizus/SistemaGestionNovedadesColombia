@@ -95,12 +95,12 @@ namespace SistemaGestionNovedadesColombia.Personal
         private void fillForm()
         {
             conexionSql.Conectar();
-            SqlCommand cmd = new SqlCommand("select * from VENDEDOR where CODVENDEDOR = '" + txtID.Text + "'", conexionSql.getConnection());
+            SqlCommand cmd = new SqlCommand("select * from VENDEDOR where CODVENDEDOR = '" + txtCod.Text + "'", conexionSql.getConnection());
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 txtID.Text = reader.GetString(1);
-                txtNombre.Text = reader.GetString(1);
+                txtNombre.Text = reader.GetString(2);
                 comboStatus.SelectedIndex = Convert.ToInt32(reader.GetBoolean(4));
                 numericDesdeN1.Value = reader.GetDecimal(5);
                 numericDesdeN2.Value = reader.GetDecimal(8);
@@ -214,18 +214,32 @@ namespace SistemaGestionNovedadesColombia.Personal
                 else
                 {
                     conexionSql.Conectar();
-                    SqlCommand cmd = new SqlCommand("select * from VENDEDOR where IDVENDEDOR = '" + txtID.Text + "'", conexionSql.getConnection());
+                    SqlCommand cmd = new SqlCommand("select * from VENDEDOR where CODVENDEDOR = '" + txtCod.Text + "'", conexionSql.getConnection());
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (!reader.HasRows)
                     {
-                        guardarVendedor("registrarVendedor");
                         conexionSql.Desconectar();
-                        MessageBox.Show("Vendedor registrado con éxito.", "Registrar Vendedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close();
+                        conexionSql.Conectar();
+                        SqlCommand cmd1 = new SqlCommand("select * from VENDEDOR where IDVENDEDOR = '" + txtCod.Text + "'", conexionSql.getConnection());
+                        SqlDataReader reader1 = cmd1.ExecuteReader();
+                        if (!reader1.HasRows)
+                        {
+                            guardarVendedor("registrarVendedor");
+                            conexionSql.Desconectar();
+                            MessageBox.Show("Vendedor registrado con éxito.", "Registrar Vendedor",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cédula ya se encuentra registrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            btnLimpiar.PerformClick();
+                            conexionSql.Desconectar();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Vendedor ya se encuentra registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Código de Vendedor ya se encuentra registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         btnLimpiar.PerformClick();
                         conexionSql.Desconectar();
                     }
@@ -292,7 +306,7 @@ namespace SistemaGestionNovedadesColombia.Personal
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
             {
                 e.Handled = true;
             }
