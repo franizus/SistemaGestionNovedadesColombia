@@ -199,27 +199,6 @@ namespace SistemaGestionNovedadesColombia
             bc.Show();
         }
 
-        private void agregarArticuloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Producto p = new Producto("Registrar");
-            p.Text = "Agregar Articulo Inventario";
-            p.Show();
-        }
-
-        private void consultarToolStripMenuItem3_Click(object sender, EventArgs e)
-        {
-            BusquedaArticulo ba = new BusquedaArticulo();
-            ba.setTipo("Consultar");
-            ba.Show();
-        }
-
-        private void modificarToolStripMenuItem4_Click(object sender, EventArgs e)
-        {
-            BusquedaArticulo ba = new BusquedaArticulo();
-            ba.setTipo("Modificar");
-            ba.Show();
-        }
-
         private void registrarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             Factura f = new Factura("Registrar");
@@ -292,6 +271,65 @@ namespace SistemaGestionNovedadesColombia
         {
             MUsuario mu = new MUsuario(user);
             mu.Show();
+        }
+
+        private void consultarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            BusquedaArticulo ba = new BusquedaArticulo();
+            ba.setTipo("Consultar");
+            ba.initGridView();
+            ba.Show();
+        }
+
+        private void modificarToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            BusquedaArticulo ba = new BusquedaArticulo();
+            ba.setTipo("Modificar");
+            ba.initGridView();
+            ba.Show();
+        }
+
+        private void registrarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Producto p = new Producto("Registrar", "");
+            p.Text = "Registrar Artículo";
+            p.Show();
+        }
+
+        private void entradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emitirFactura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void darDeBajaFactura_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void darDeAltaArticulo_Click(object sender, EventArgs e)
+        {
+            BusquedaArticulo ba = new BusquedaArticulo();
+            ba.setTipo("Dar de Alta");
+            ba.initGridView();
+            ba.Show();
+        }
+
+        private void darDeBajaArticulo_Click(object sender, EventArgs e)
+        {
+            BusquedaArticulo ba = new BusquedaArticulo();
+            ba.setTipo("Dar de Baja");
+            ba.initGridView();
+            ba.Show();
         }
     }
 }

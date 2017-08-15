@@ -157,8 +157,8 @@ namespace SistemaGestionNovedadesColombia
 
         private int getIDZona()
         {
-            String provincia = comboProvincia.SelectedItem.ToString();
-            String ciudad = comboCiudad.SelectedItem.ToString();
+            string provincia = comboProvincia.SelectedItem.ToString();
+            string ciudad = comboCiudad.SelectedItem.ToString();
             int idZona = 0;
 
             conexionSql.Conectar();

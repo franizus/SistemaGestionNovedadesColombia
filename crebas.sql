@@ -21,6 +21,45 @@ alter table CLIENTE
 go
 
 if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('ARTICULO') and o.name = 'FK_ARTICULO_RELATIONS_GRUPOTAL')
+alter table ARTICULO
+   drop constraint FK_ARTICULO_RELATIONS_GRUPOTAL
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('CLIENTE') and o.name = 'FK_CLIENTE_RELATIONS_ZONA')
+alter table CLIENTE
+   drop constraint FK_CLIENTE_RELATIONS_ZONA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('TYCXPRODUCTO') and o.name = 'FK_TYCXPROD_RELATIONS_ARTICULO')
+alter table TYCXPRODUCTO
+   drop constraint FK_TYCXPROD_RELATIONS_ARTICULO
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('ARTICULO')
+            and   name  = 'RELATIONSHIP_4_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index ARTICULO.RELATIONSHIP_4_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('ARTICULO')
+            and   name  = 'RELATIONSHIP_2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index ARTICULO.RELATIONSHIP_2_FK
+go
+
+if exists (select 1
             from  sysindexes
            where  id    = object_id('CLIENTE')
             and   name  = 'RELATIONSHIP_1_FK'
@@ -65,6 +104,22 @@ if exists (select 1
 go
 
 if exists (select 1
+            from  sysindexes
+           where  id    = object_id('TYCXPRODUCTO')
+            and   name  = 'RELATIONSHIP_3_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index TYCXPRODUCTO.RELATIONSHIP_3_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('TYCXPRODUCTO')
+            and   type = 'U')
+   drop table TYCXPRODUCTO
+go
+
+if exists (select 1
             from  sysobjects
            where  id = object_id('USUARIO')
             and   type = 'U')
@@ -77,6 +132,37 @@ if exists (select 1
             and   type = 'U')
    drop table ZONA
 go
+
+/*==============================================================*/
+/* Table: ARTICULO                                              */
+/*==============================================================*/
+create table ARTICULO (
+   REFERENCIA           varchar(15)          not null,
+   IDPROVEEDOR          varchar(15)          not null,
+   NOMBREGTC            varchar(20)          not null,
+   NOMBREART            varchar(100)         not null,
+   PRECIOCOMPRA         money                not null,
+   PRECIOVENTA          money                not null,
+   constraint PK_ARTICULO primary key (REFERENCIA)
+)
+go
+ALTER TABLE ARTICULO ADD ESTADO bit NOT NULL
+GO
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_2_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_2_FK on ARTICULO (IDPROVEEDOR ASC)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_4_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_4_FK on ARTICULO (NOMBREGTC ASC)
+go
+
 
 /*==============================================================*/
 /* Table: CLIENTE                                               */
@@ -140,6 +226,23 @@ go
 ALTER TABLE PROVEEDOR ADD ESTADO bit NOT NULL
 GO
 
+/*==============================================================*/
+/* Table: TYCXPRODUCTO                                          */
+/*==============================================================*/
+create table TYCXPRODUCTO (
+   REFERENCIA           varchar(15)          not null,
+   TALLA                varchar(10)          not null,
+   COLOR                varchar(20)          not null,
+   CANTIDAD             int                  not null
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_3_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_3_FK on TYCXPRODUCTO (REFERENCIA ASC)
+go
 
 /*==============================================================*/
 /* Table: USUARIO                                               */
@@ -839,6 +942,60 @@ BEGIN
 END
 go
 
+CREATE PROCEDURE registrarArticulo
+   @REFERENCIA           varchar(15),
+   @IDPROVEEDOR          varchar(15),
+   @NOMBREGTC            varchar(20),
+   @NOMBREART            varchar(100),
+   @PRECIOCOMPRA         money,
+   @PRECIOVENTA          money,    
+   @ESTADO				bit
+AS 
+BEGIN 
+     INSERT INTO ARTICULO
+     ( 
+            REFERENCIA,
+		   IDPROVEEDOR,
+		   NOMBREGTC,
+		   NOMBREART,
+		   PRECIOCOMPRA,
+		   PRECIOVENTA,
+		   ESTADO
+     ) 
+     VALUES 
+     ( 
+             @REFERENCIA,
+		   @IDPROVEEDOR,
+		   @NOMBREGTC,
+		   @NOMBREART,
+		   @PRECIOCOMPRA,
+		   @PRECIOVENTA,
+		   @ESTADO
+     ) 
+END 
+GO
+
+CREATE PROCEDURE actualizarArticulo
+   @REFERENCIA           varchar(15),
+   @IDPROVEEDOR          varchar(15),
+   @NOMBREGTC            varchar(20),
+   @NOMBREART            varchar(100),
+   @PRECIOCOMPRA         money,
+   @PRECIOVENTA          money,
+    @ESTADO				bit     
+AS 
+BEGIN 
+     UPDATE ARTICULO SET
+		   IDPROVEEDOR = @IDPROVEEDOR,
+		   NOMBREGTC = @NOMBREGTC,
+		   NOMBREART = @NOMBREART,
+		   PRECIOCOMPRA = @PRECIOCOMPRA,
+		   PRECIOVENTA = @PRECIOVENTA,
+		   ESTADO = @ESTADO
+     WHERE REFERENCIA = @REFERENCIA
+END 
+GO
+
 
 
 /*
@@ -881,6 +1038,16 @@ select IDPROVEEDOR as 'Identificacion', NOMBRE as 'Nombre', CASE WHEN ESTADO = 0
 from PROVEEDOR
 go
 
+create view vistaArticuloTallas as
+select TALLA as 'Talla', COLOR as 'Color', CANTIDAD as 'Cantidad', REFERENCIA
+from TYCXPRODUCTO
+go
+
+create view vistaArticulo as
+select REFERENCIA as 'Referencia', NOMBREART as 'Nombre', CASE WHEN ESTADO = 0 THEN 'Activo' ELSE 'Inactivo' END as 'Estado'
+from ARTICULO
+go
+
 
 
 
@@ -896,6 +1063,7 @@ select * from PARAMETROS
 select * from GRUPOTALLACOLOR
 select * from VENDEDOR
 select * from PROVEEDOR
+select * from ARTICULO
 --select * from ZonaCiudadProvincia
 go
 

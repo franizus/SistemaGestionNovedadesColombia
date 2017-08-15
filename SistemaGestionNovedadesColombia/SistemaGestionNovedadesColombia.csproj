@@ -118,23 +118,41 @@
     <Compile Include="Facturacion\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario\AgregarArticulo.cs">
+    <Compile Include="Inventario\Articulo\AgregarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario\AgregarArticulo.Designer.cs">
+    <Compile Include="Inventario\Articulo\AgregarArticulo.Designer.cs">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario\BusquedaArticulo.cs">
+    <Compile Include="Inventario\Articulo\BusquedaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario\BusquedaArticulo.Designer.cs">
+    <Compile Include="Inventario\Articulo\BusquedaArticulo.Designer.cs">
       <DependentUpon>BusquedaArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario\ArticuloInventario.cs">
+    <Compile Include="Inventario\Articulo\ArticuloInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario\ArticuloInventario.Designer.cs">
+    <Compile Include="Inventario\Articulo\ArticuloInventario.Designer.cs">
       <DependentUpon>ArticuloInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloStock.Designer.cs">
+      <DependentUpon>ArticuloStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\Entrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\Entrada.Designer.cs">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\Salida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\Salida.Designer.cs">
+      <DependentUpon>Salida.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
@@ -225,13 +243,13 @@
     <EmbeddedResource Include="Facturacion\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\AgregarArticulo.resx">
+    <EmbeddedResource Include="Inventario\Articulo\AgregarArticulo.resx">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\ArticuloInventario.resx">
+    <EmbeddedResource Include="Inventario\Articulo\ArticuloInventario.resx">
       <DependentUpon>ArticuloInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\BusquedaArticulo.resx">
+    <EmbeddedResource Include="Inventario\Articulo\BusquedaArticulo.resx">
       <DependentUpon>BusquedaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">

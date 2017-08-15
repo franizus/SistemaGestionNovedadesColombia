@@ -62,7 +62,7 @@ namespace SistemaGestionNovedadesColombia
         {
             if (gridViewCliente.SelectedRows.Count >= 1)
             {
-                String idCliente = gridViewCliente.SelectedRows[0].Cells[0].Value.ToString();
+                string idCliente = gridViewCliente.SelectedRows[0].Cells[0].Value.ToString();
                 Cliente form = new Cliente(tipo, idCliente);
                 form.Text = tipo + " Cliente";
                 form.Show();
