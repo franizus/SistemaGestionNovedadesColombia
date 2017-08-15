@@ -4,8 +4,8 @@ CREAR BASE DE DATOS
 use master
 drop database SGIV
 
-create database SGIV
-use SGIV
+create database SGIV1
+use SGIV1
 
 
 
@@ -275,9 +275,9 @@ GO
 /* Table: VENDEDOR                                              */
 /*==============================================================*/
 create table VENDEDOR (
+   CODVENDEDOR           varchar(15)          not null,
    IDVENDEDOR           varchar(15)          not null,
    NOMBRE               varchar(50)          not null,
-   TELEFONO             varchar(10)          null,
    DIRECCION            varchar(100)         null,
    ESTADO               bit                  not null,
    N1DESDE              money                not null,
@@ -295,7 +295,7 @@ create table VENDEDOR (
    N5DESDE              money                not null,
    N5HASTA              money                not null,
    N5PORCENTAJE         decimal(3,2)         not null,
-   constraint PK_VENDEDOR primary key (IDVENDEDOR)
+   constraint PK_VENDEDOR primary key (CODVENDEDOR)
 )
 go
 
@@ -624,10 +624,10 @@ END
 GO
 
 create PROCEDURE registrarVendedor
+   @CODVENDEDOR			varchar(15),
    @IDVENDEDOR            varchar(15),
    @NOMBRE               varchar(50),
    @ESTADO				  bit,
-   @TELEFONO             varchar(10) = null,
    @DIRECCION            varchar(100) = null,
    @N1DESDE            money,
    @N2DESDE             money,
@@ -648,10 +648,10 @@ AS
 BEGIN 
      INSERT INTO VENDEDOR
      ( 
+			CODVENDEDOR,
             IDVENDEDOR,
 			NOMBRE,
 			ESTADO,
-			TELEFONO,
 			DIRECCION,
 			   N1DESDE,
 			   N2DESDE,
@@ -671,10 +671,10 @@ BEGIN
      ) 
      VALUES 
      ( 
+			@CODVENDEDOR,
             @IDVENDEDOR,
 		   @NOMBRE,
 		   @ESTADO,
-		   @TELEFONO,
 		   @DIRECCION,
 		   @N1DESDE,
 		   @N2DESDE,
@@ -696,10 +696,10 @@ END
 GO
 
 CREATE PROCEDURE actualizarVendedor
+	@CODVENDEDOR			varchar(15),
    @IDVENDEDOR            varchar(15),
    @NOMBRE               varchar(50),
    @ESTADO				  bit,
-   @TELEFONO             varchar(10) = null,
    @DIRECCION            varchar(100) = null,
    @N1DESDE            money,
    @N2DESDE             money,
@@ -719,9 +719,9 @@ CREATE PROCEDURE actualizarVendedor
 AS 
 BEGIN 
      UPDATE VENDEDOR SET
+			IDVENDEDOR = @IDVENDEDOR,
             NOMBRE = @NOMBRE,
 			ESTADO = @ESTADO,
-			TELEFONO = @TELEFONO,
 			DIRECCION = @DIRECCION,
 			   N1DESDE = @N1DESDE,
 			   N1HASTA = @N1HASTA,
@@ -738,7 +738,7 @@ BEGIN
 			   N5DESDE = @N5DESDE,
 			   N5HASTA = @N5HASTA,
 			   N5PORCENTAJE = @N5PORCENTAJE
-     WHERE IDVENDEDOR = @IDVENDEDOR
+     WHERE CODVENDEDOR = @CODVENDEDOR
 END 
 GO
 
@@ -1028,8 +1028,8 @@ select NOMBREGTC as 'Nombre', TALLAS as 'Tallas', COLORES as 'Colores'
 from GRUPOTALLACOLOR
 go
 
-create view vistaVendedor as
-select IDVENDEDOR as 'Identificacion', NOMBRE as 'Nombre', CASE WHEN ESTADO = 0 THEN 'Activo' ELSE 'Inactivo' END as 'Estado'
+alter view vistaVendedor as
+select CODVENDEDOR as 'Codigo', IDVENDEDOR as 'Identificacion', NOMBRE as 'Nombre', CASE WHEN ESTADO = 0 THEN 'Activo' ELSE 'Inactivo' END as 'Estado'
 from VENDEDOR
 go
 

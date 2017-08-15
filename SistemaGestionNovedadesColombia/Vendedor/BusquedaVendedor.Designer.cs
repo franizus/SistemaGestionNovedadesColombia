@@ -135,6 +135,7 @@
             this.comboBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBusqueda.FormattingEnabled = true;
             this.comboBusqueda.Items.AddRange(new object[] {
+            "Código",
             "Identificación",
             "Nombre",
             "Estado"});

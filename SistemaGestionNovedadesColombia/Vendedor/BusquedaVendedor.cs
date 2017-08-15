@@ -45,7 +45,7 @@ namespace SistemaGestionNovedadesColombia.Personal
             conexionSql.Desconectar();
 
             gridViewVendedor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            gridViewVendedor.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            gridViewVendedor.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

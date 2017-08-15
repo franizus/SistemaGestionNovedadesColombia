@@ -15,7 +15,7 @@ namespace SistemaGestionNovedadesColombia
         {
             try
             {
-                conexion = new SqlConnection("Data Source=DESKTOP-DC5VPQT\\SQLEXPRESS;Initial Catalog=SGIV;Integrated Security=True");
+                conexion = new SqlConnection("Data Source=DESKTOP-DC5VPQT\\SQLEXPRESS;Initial Catalog=SGIV1;Integrated Security=True");
                 conexion.Open();
             }
             catch (SqlException e)
