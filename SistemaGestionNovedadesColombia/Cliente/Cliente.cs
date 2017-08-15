@@ -224,7 +224,7 @@ namespace SistemaGestionNovedadesColombia
                         temp = false;
                     }
                 }
-                else if (txtID.Text.Length < 12 && comboIDType.SelectedIndex == 0)
+                else if (txtID.Text.Length < 13 && comboIDType.SelectedIndex == 0)
                 {
                     MessageBox.Show("RUC Incompleto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtID.Clear();
@@ -291,11 +291,14 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            comboIDType.SelectedIndex = 0;
+            if (!modificar)
+            {
+                comboIDType.SelectedIndex = 0;
+                txtID.Clear();
+                txtNombre.Clear();
+            }
             comboProvincia.SelectedIndex = 0;
             fillComboCiudad();
-            txtID.Clear();
-            txtNombre.Clear();
             txtEmail.Clear();
             txtDireccion.Clear();
             txtTelf.Clear();

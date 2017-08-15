@@ -520,6 +520,184 @@ BEGIN
 END 
 GO
 
+create PROCEDURE registrarVendedor
+   @IDVENDEDOR            varchar(15),
+   @NOMBRE               varchar(50),
+   @ESTADO				  bit,
+   @TELEFONO             varchar(10) = null,
+   @DIRECCION            varchar(100) = null,
+   @N1DESDE            money,
+   @N2DESDE             money,
+   @N3DESDE                money,
+   @N4DESDE            money,
+   @N5DESDE            money,
+   @N1HASTA             money,
+   @N2HASTA                money,
+   @N3HASTA            money,
+   @N4HASTA             money,
+   @N5HASTA                money,
+   @N1PORCENTAJE            decimal(3,2),
+   @N2PORCENTAJE            decimal(3,2),
+   @N3PORCENTAJE            decimal(3,2),
+   @N4PORCENTAJE            decimal(3,2),
+   @N5PORCENTAJE            decimal(3,2)       
+AS 
+BEGIN 
+     INSERT INTO VENDEDOR
+     ( 
+            IDVENDEDOR,
+			NOMBRE,
+			ESTADO,
+			TELEFONO,
+			DIRECCION,
+			   N1DESDE,
+			   N2DESDE,
+			   N3DESDE,
+			   N4DESDE,
+			   N5DESDE,
+			   N1HASTA,
+			   N2HASTA,
+			   N3HASTA,
+			   N4HASTA,
+			   N5HASTA,
+			   N1PORCENTAJE,
+			   N2PORCENTAJE,
+			   N3PORCENTAJE,
+			   N4PORCENTAJE,
+			   N5PORCENTAJE
+     ) 
+     VALUES 
+     ( 
+            @IDVENDEDOR,
+		   @NOMBRE,
+		   @ESTADO,
+		   @TELEFONO,
+		   @DIRECCION,
+		   @N1DESDE,
+		   @N2DESDE,
+		   @N3DESDE,
+		   @N4DESDE,
+		   @N5DESDE,
+		   @N1HASTA,
+		   @N2HASTA,
+		   @N3HASTA,
+		   @N4HASTA,
+		   @N5HASTA,
+		   @N1PORCENTAJE,
+		   @N2PORCENTAJE,
+		   @N3PORCENTAJE,
+		   @N4PORCENTAJE,
+		   @N5PORCENTAJE    
+     ) 
+END 
+GO
+
+CREATE PROCEDURE actualizarVendedor
+   @IDVENDEDOR            varchar(15),
+   @NOMBRE               varchar(50),
+   @ESTADO				  bit,
+   @TELEFONO             varchar(10) = null,
+   @DIRECCION            varchar(100) = null,
+   @N1DESDE            money,
+   @N2DESDE             money,
+   @N3DESDE                money,
+   @N4DESDE            money,
+   @N5DESDE            money,
+   @N1HASTA             money,
+   @N2HASTA                money,
+   @N3HASTA            money,
+   @N4HASTA             money,
+   @N5HASTA                money,
+   @N1PORCENTAJE            decimal(3,2),
+   @N2PORCENTAJE            decimal(3,2),
+   @N3PORCENTAJE            decimal(3,2),
+   @N4PORCENTAJE            decimal(3,2),
+   @N5PORCENTAJE            decimal(3,2)        
+AS 
+BEGIN 
+     UPDATE VENDEDOR SET
+            NOMBRE = @NOMBRE,
+			ESTADO = @ESTADO,
+			TELEFONO = @TELEFONO,
+			DIRECCION = @DIRECCION,
+			   N1DESDE = @N1DESDE,
+			   N1HASTA = @N1HASTA,
+			   N1PORCENTAJE = @N1PORCENTAJE,
+			   N2DESDE = @N2DESDE,
+			   N2HASTA = @N2HASTA,
+			   N2PORCENTAJE = @N2PORCENTAJE,
+			   N3DESDE = @N3DESDE,
+			   N3HASTA = @N3HASTA,
+			   N3PORCENTAJE = @N3PORCENTAJE,
+			   N4DESDE = @N4DESDE,
+			   N4HASTA = @N4HASTA,
+			   N4PORCENTAJE = @N4PORCENTAJE,
+			   N5DESDE = @N5DESDE,
+			   N5HASTA = @N5HASTA,
+			   N5PORCENTAJE = @N5PORCENTAJE
+     WHERE IDVENDEDOR = @IDVENDEDOR
+END 
+GO
+
+CREATE PROCEDURE registrarProveedor
+   @IDPROVEEDOR            varchar(15),
+   @TIPOID               varchar(10),
+   @NOMBRE               varchar(50),
+   @CONTACTO             varchar(50) = null,
+   @TELEFONO             varchar(10) = null,
+   @EMAIL                varchar(30) = null,
+   @DIRECCION            varchar(100),
+   @ESTADO				  bit      
+AS 
+BEGIN 
+     INSERT INTO PROVEEDOR
+     ( 
+            IDPROVEEDOR,
+            TIPOID,
+            NOMBRE,
+            CONTACTO,
+            TELEFONO,
+            EMAIL,
+			DIRECCION,
+			ESTADO
+     ) 
+     VALUES 
+     ( 
+            @IDPROVEEDOR,
+            @TIPOID,
+            @NOMBRE,
+            @CONTACTO,
+            @TELEFONO,
+            @EMAIL,
+			@DIRECCION,
+			@ESTADO               
+     ) 
+END 
+GO
+
+CREATE PROCEDURE actualizarProveedor
+   @IDPROVEEDOR            varchar(15),
+   @TIPOID               varchar(10),
+   @NOMBRE               varchar(50),
+   @CONTACTO             varchar(50) = null,
+   @TELEFONO             varchar(10) = null,
+   @EMAIL                varchar(30) = null,
+   @DIRECCION            varchar(100),
+   @ESTADO				  bit      
+AS 
+BEGIN 
+     UPDATE PROVEEDOR SET
+            TIPOID = @TIPOID,
+            NOMBRE = @NOMBRE,
+            CONTACTO = @CONTACTO,
+            TELEFONO = @TELEFONO,
+            EMAIL = @EMAIL,
+			DIRECCION = @DIRECCION,
+			ESTADO = @ESTADO
+     WHERE IDPROVEEDOR = @IDPROVEEDOR
+END 
+GO
+
 create PROCEDURE modifyParams
 	@IVA             decimal(3,2),
 	@CLIENTE         nvarchar(20)
@@ -693,6 +871,16 @@ select NOMBREGTC as 'Nombre', TALLAS as 'Tallas', COLORES as 'Colores'
 from GRUPOTALLACOLOR
 go
 
+create view vistaVendedor as
+select IDVENDEDOR as 'Identificacion', NOMBRE as 'Nombre', CASE WHEN ESTADO = 0 THEN 'Activo' ELSE 'Inactivo' END as 'Estado'
+from VENDEDOR
+go
+
+create view vistaProveedor as
+select IDPROVEEDOR as 'Identificacion', NOMBRE as 'Nombre', CASE WHEN ESTADO = 0 THEN 'Activo' ELSE 'Inactivo' END as 'Estado'
+from PROVEEDOR
+go
+
 
 
 
@@ -707,6 +895,7 @@ select * from ZONA
 select * from PARAMETROS
 select * from GRUPOTALLACOLOR
 select * from VENDEDOR
+select * from PROVEEDOR
 --select * from ZonaCiudadProvincia
 go
 

@@ -29,7 +29,7 @@ namespace SistemaGestionNovedadesColombia.Personal
 
         private void initComponents(string tipo, string idVendedor)
         {
-            txtID.MaxLength = 10;
+            txtID.MaxLength = 13;
             txtTelefono.MaxLength = 10;
 
             tableLayoutPanel1.RowStyles[0].SizeType = SizeType.Percent;
@@ -59,6 +59,12 @@ namespace SistemaGestionNovedadesColombia.Personal
             }
             else if (tipo.Equals("Consultar"))
             {
+                if (!idVendedor.Equals(""))
+                {
+                    txtID.Text = idVendedor;
+                    fillForm();
+                }
+
                 comboStatus.Enabled = false;
                 txtID.Enabled = false;
                 txtNombre.Enabled = false;
@@ -75,16 +81,14 @@ namespace SistemaGestionNovedadesColombia.Personal
                 numericHastaN4.Enabled = false;
                 numericHastaN5.Enabled = false;
                 numericPorcentajeN1.Enabled = false;
-                numericPorcentajeN1.Enabled = false;
-                numericPorcentajeN1.Enabled = false;
-                numericPorcentajeN1.Enabled = false;
+                numericPorcentajeN2.Enabled = false;
+                numericPorcentajeN3.Enabled = false;
+                numericPorcentajeN4.Enabled = false;
+                numericPorcentajeN5.Enabled = false;
                 tableLayoutPanel1.RowStyles[3].SizeType = SizeType.Percent;
                 tableLayoutPanel1.RowStyles[3].Height = 10;
                 btnSalir1.Height = 31;
             }
-            
-            comboStatus.SelectedIndex = 0;
-            comboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void fillForm()
@@ -138,7 +142,6 @@ namespace SistemaGestionNovedadesColombia.Personal
                 MessageBox.Show(err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 temp = false;
             }
-            else
             {
                 if (txtID.Text.Length == 10)
                 {
@@ -153,11 +156,28 @@ namespace SistemaGestionNovedadesColombia.Personal
                         temp = false;
                     }
                 }
-                else if (txtID.Text.Length < 10)
+                else if (txtID.Text.Length == 13)
                 {
-                    MessageBox.Show("Cédula Incompleta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (Validacion.validarCedula(txtID.Text.Substring(0, 10)))
+                    {
+                        temp = validarTelefono();
+                    }
+                    else
+                    {
+                        MessageBox.Show("RUC Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtID.Clear();
+                        temp = false;
+                    }
+                }
+                else if (txtID.Text.Length < 13 && txtID.Text.Length > 10)
+                {
+                    MessageBox.Show("RUC Incompleto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtID.Clear();
                     temp = false;
+                }
+                else
+                {
+                    temp = validarTelefono();
                 }
             }
             return temp;
@@ -249,9 +269,12 @@ namespace SistemaGestionNovedadesColombia.Personal
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            if (!modificar)
+            {
+                txtID.Clear();
+                txtNombre.Clear();
+            }
             comboStatus.SelectedIndex = 0;
-            txtID.Text = "";
-            txtNombre.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
             numericDesdeN1.Value = 0;

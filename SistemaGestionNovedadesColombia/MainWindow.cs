@@ -180,7 +180,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Proveedor.Proveedor form = new Proveedor.Proveedor("Registrar");
+            Proveedor.Proveedor form = new Proveedor.Proveedor("Registrar", "");
             form.Text = "Registrar Proveedor";
             form.Show();
         }

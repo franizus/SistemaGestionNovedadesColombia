@@ -72,6 +72,7 @@
             this.gridViewVendedor.Name = "gridViewVendedor";
             this.gridViewVendedor.ReadOnly = true;
             this.gridViewVendedor.RowTemplate.Height = 24;
+            this.gridViewVendedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridViewVendedor.Size = new System.Drawing.Size(680, 186);
             this.gridViewVendedor.TabIndex = 2;
             this.gridViewVendedor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
