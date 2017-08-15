@@ -79,6 +79,7 @@ namespace SistemaGestionNovedadesColombia
                     modificar = true;
                     fillForm();
                     txtID.Enabled = false;
+                    txtNombre.Enabled = false;
                 }
                 if (tipo.Equals("Registrar"))
                 {
@@ -268,7 +269,7 @@ namespace SistemaGestionNovedadesColombia
             }
             else
             {
-                MessageBox.Show("Email Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("E-mail Incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Clear();
                 return false;
             }
@@ -301,7 +302,7 @@ namespace SistemaGestionNovedadesColombia
             txtContacto.Clear();
         }
 
-        private void guardarCliente(String procedure)
+        private void guardarCliente(string procedure)
         {
             conexionSql.Conectar();
             SqlCommand cmd = new SqlCommand(procedure, conexionSql.getConnection());
@@ -344,7 +345,7 @@ namespace SistemaGestionNovedadesColombia
                 if (modificar)
                 {
                     guardarCliente("actualizarCliente");
-                    MessageBox.Show("Cliente modificado con exito.", "Modificar Cliente", MessageBoxButtons.OK,
+                    MessageBox.Show("Cliente modificado con éxito.", "Modificar Cliente", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -357,7 +358,7 @@ namespace SistemaGestionNovedadesColombia
                     {
                         guardarCliente("registrarCliente");
                         conexionSql.Desconectar();
-                        MessageBox.Show("Cliente guardado con exito.", "Registrar Cliente", MessageBoxButtons.OK,
+                        MessageBox.Show("Cliente registrado con éxito.", "Registrar Cliente", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -392,11 +393,11 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea Eliminar?", "Eliminar", MessageBoxButtons.YesNo,
+            if (MessageBox.Show("¿Está seguro que desea eliminar?", "Eliminar", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 eliminarCliente();
-                MessageBox.Show("Cliente eliminado con exito.", "Eliminar Cliente", MessageBoxButtons.OK,
+                MessageBox.Show("Cliente eliminado con éxito.", "Eliminar", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 this.Close();
             }

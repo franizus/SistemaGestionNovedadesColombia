@@ -36,7 +36,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
             while (reader.Read())
             {
                 txtNombre.Text = reader.GetString(2);
-                txtContrasenia.WaterMark = "Ingrese Nueva Contraseña";
+                txtContrasenia.WaterMark = "Ingrese nueva contraseña";
             }
             conexionSql.Desconectar();
         }
@@ -89,7 +89,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
                 {
                     modificarUsuario();
                     conexionSql.Desconectar();
-                    MessageBox.Show("Datos modificados con exito.", "Usuario", MessageBoxButtons.OK,
+                    MessageBox.Show("Datos modificados con éxito.", "Usuario", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     this.Close();
                 }

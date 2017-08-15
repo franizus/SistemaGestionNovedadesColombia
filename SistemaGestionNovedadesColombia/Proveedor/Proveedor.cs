@@ -41,7 +41,6 @@ namespace SistemaGestionNovedadesColombia.Proveedor
             {
                 comboIDType.Enabled = false;
                 comboStatus.Enabled = false;
-                comboSubjType.Enabled = false;
                 txtID.Enabled = false;
                 txtNombre.Enabled = false;
                 txtEmail.Enabled = false;
@@ -66,8 +65,6 @@ namespace SistemaGestionNovedadesColombia.Proveedor
             comboIDType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboStatus.SelectedIndex = 0;
             comboStatus.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboSubjType.SelectedIndex = 0;
-            comboSubjType.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -80,7 +77,6 @@ namespace SistemaGestionNovedadesColombia.Proveedor
         {
             comboIDType.SelectedIndex = 0;
             comboStatus.SelectedIndex = 0;
-            comboSubjType.SelectedIndex = 0;
             txtID.Text = "";
             txtNombre.Text = "";
             txtEmail.Text = "";

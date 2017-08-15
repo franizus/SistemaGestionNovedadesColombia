@@ -116,7 +116,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
                     if (modificar)
                     {
                         modificarGTC();
-                        MessageBox.Show("Grupo de tallas y colores modificado con exito.",
+                        MessageBox.Show("Modificado con éxito.",
                             "Grupo de Tallas y Colores", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -124,7 +124,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
                     {
                         guardarGTC();
                         conexionSql.Desconectar();
-                        MessageBox.Show("Grupo de tallas y colores guardado con exito.",
+                        MessageBox.Show("Registrado con éxito.",
                             "Grupo de Tallas y Colores", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }

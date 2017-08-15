@@ -131,7 +131,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 1);
             this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Cancelar";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -475,7 +475,7 @@
             this.btnSalir2.Name = "btnSalir2";
             this.btnSalir2.Size = new System.Drawing.Size(107, 1);
             this.btnSalir2.TabIndex = 14;
-            this.btnSalir2.Text = "Salir";
+            this.btnSalir2.Text = "Cancelar";
             this.btnSalir2.UseVisualStyleBackColor = true;
             this.btnSalir2.Click += new System.EventHandler(this.btnSalir2_Click_1);
             // 

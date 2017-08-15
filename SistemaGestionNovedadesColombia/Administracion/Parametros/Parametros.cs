@@ -32,7 +32,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
             while (reader.Read())
             {
                 txtClienteDefecto.Text = reader.GetString(2);
-                numericIVA.Value = reader.GetDecimal(1);
+                numericIVA.Value = reader.GetDecimal(1) * 100;
             }
             conexionSql.Desconectar();
         }
@@ -77,7 +77,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
             SqlCommand cmd = new SqlCommand("modifyParams", conexionSql.getConnection());
             cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.Add("@IVA", SqlDbType.Decimal).Value = numericIVA.Value;
+            cmd.Parameters.Add("@IVA", SqlDbType.Decimal).Value = numericIVA.Value / 100;
             cmd.Parameters.Add("@CLIENTE", SqlDbType.VarChar).Value = txtClienteDefecto.Text;
 
             cmd.ExecuteNonQuery();
@@ -89,7 +89,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
             if (validarRegistro())
             {
                 guardarParams();
-                MessageBox.Show("Parametros guardados con exito.", "Parametros", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Parámetros guardados con éxito.", "Parámetros", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
@@ -107,9 +107,36 @@ namespace SistemaGestionNovedadesColombia.Administracion.Parametros
         {
             String nombre = gridViewTallaColor.SelectedRows[0].Cells[0].Value.ToString();
             GrupoTallaColor form = new GrupoTallaColor(nombre);
-            form.Text = "Modificar Grupo de Talla y Color";
+            form.Text = "Modificar Grupo de Tallas y Colores";
             form.Show();
             this.Close();
+        }
+
+        private void gridViewTallaColor_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hti = gridViewTallaColor.HitTest(e.X, e.Y);
+                gridViewTallaColor.ClearSelection();
+                gridViewTallaColor.Rows[hti.RowIndex].Selected = true;
+            }
+        }
+
+        private void borrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea eliminar?", "Eliminar", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Int32 rowToDelete = gridViewTallaColor.Rows.GetFirstRow(DataGridViewElementStates.Selected);
+                String nombre = gridViewTallaColor.SelectedRows[0].Cells[0].Value.ToString();
+                conexionSql.Conectar();
+                SqlCommand command = new SqlCommand("DELETE FROM GRUPOTALLACOLOR WHERE NOMBREGTC = '" + nombre + "'", conexionSql.getConnection());
+                command.ExecuteNonQuery();
+                conexionSql.Desconectar();
+                gridViewTallaColor.Rows.RemoveAt(rowToDelete);
+                gridViewTallaColor.ClearSelection();
+                MessageBox.Show("Eliminado con éxito.", "Grupo de Tallas y Colores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SistemaGestionNovedadesColombia
 {
     public partial class BusquedaCliente : Form
     {
-        private String tipo;
+        private string tipo;
         private ConexionSQL conexionSql;
 
         public BusquedaCliente()
@@ -26,7 +26,7 @@ namespace SistemaGestionNovedadesColombia
             comboBusqueda.SelectedIndex = 0;
         }
 
-        public void setTipo(String tipo)
+        public void setTipo(string tipo)
         {
             this.tipo = tipo;
         }

@@ -61,7 +61,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
             while (reader.Read())
             {
                 txtNombre.Text = reader.GetString(2);
-                txtContrasenia.WaterMark = "Ingrese Nueva Contraseña";
+                txtContrasenia.WaterMark = "Ingrese nueva contraseña";
                 comboEstado.SelectedIndex = Convert.ToInt32(reader.GetBoolean(16));
                 chkClienteL.Checked = reader.GetBoolean(3);
                 chkClienteE.Checked = reader.GetBoolean(4);
@@ -170,7 +170,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
                     if (modificar)
                     {
                         guardarUsuario("modifyUserAdmin");
-                        MessageBox.Show("Usuario modificado con exito.", "Usuario", MessageBoxButtons.OK,
+                        MessageBox.Show("Usuario modificado con éxito.", "Usuario", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         this.Close();
                     }
@@ -178,7 +178,7 @@ namespace SistemaGestionNovedadesColombia.Administracion.Usuario
                     {
                         guardarUsuario("addUser");
                         conexionSql.Desconectar();
-                        MessageBox.Show("Usuario guardado con exito.", "Usuario", MessageBoxButtons.OK,
+                        MessageBox.Show("Usuario registrado con éxito.", "Usuario", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         this.Close();
                     }

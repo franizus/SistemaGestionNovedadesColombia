@@ -18,7 +18,7 @@ namespace SistemaGestionNovedadesColombia
             this.Text = String.Format("Acerca de");
             this.labelProductName.Text = "Sistema de Gestión de Inventario y Ventas (S.G.I.V)";
             this.labelVersion.Text = String.Format("Version {0}", 0.9);
-            this.labelCopyright.Text = AssemblyCopyright;
+            this.labelCopyright.Text = AssemblyCopyright + " 2017";
             this.labelCompanyName.Text = "Novedades de Colombia";
         }
 
@@ -101,11 +101,6 @@ namespace SistemaGestionNovedadesColombia
             }
         }
         #endregion
-
-        private void tableLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void okButton_Click(object sender, EventArgs e)
         {

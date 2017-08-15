@@ -133,7 +133,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 1);
             this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Cancelar";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -259,7 +259,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 20);
             this.label9.TabIndex = 41;
-            this.label9.Text = "Administracion:";
+            this.label9.Text = "Administración:";
             // 
             // label7
             // 
@@ -307,7 +307,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 20);
             this.label6.TabIndex = 39;
-            this.label6.Text = "Facturacion:";
+            this.label6.Text = "Facturación:";
             // 
             // label8
             // 

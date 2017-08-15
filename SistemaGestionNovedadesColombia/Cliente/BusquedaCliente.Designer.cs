@@ -111,7 +111,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(178, 20);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Termino de Busqueda:";
+            this.label2.Text = "Término de Búsqueda:";
             // 
             // comboBusqueda
             // 
@@ -152,7 +152,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(107, 36);
             this.btnSalir.TabIndex = 16;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Cancelar";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 

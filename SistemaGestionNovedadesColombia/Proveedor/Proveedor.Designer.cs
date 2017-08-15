@@ -48,14 +48,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.comboIDType = new System.Windows.Forms.ComboBox();
-            this.comboStatus = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboStatus = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -243,7 +243,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 20);
             this.label6.TabIndex = 31;
-            this.label6.Text = "Telefono:";
+            this.label6.Text = "Teléfono:";
             // 
             // label7
             // 
@@ -267,7 +267,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 20);
             this.label8.TabIndex = 33;
-            this.label8.Text = "Direccion:";
+            this.label8.Text = "Dirección:";
             // 
             // txtTelf
             // 
@@ -310,7 +310,7 @@
             this.groupBox1.Size = new System.Drawing.Size(728, 279);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Proveedor";
+            this.groupBox1.Text = "Datos";
             // 
             // tableLayoutPanel3
             // 
@@ -342,31 +342,18 @@
             // comboIDType
             // 
             this.comboIDType.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboIDType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboIDType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboIDType.FormattingEnabled = true;
             this.comboIDType.Items.AddRange(new object[] {
-            "Registro Unico Contribuyente (RUC)",
-            "Cedula de Identidad",
+            "RUC",
+            "Cedula",
             "Pasaporte"});
             this.comboIDType.Location = new System.Drawing.Point(313, 11);
             this.comboIDType.Margin = new System.Windows.Forms.Padding(4);
             this.comboIDType.Name = "comboIDType";
             this.comboIDType.Size = new System.Drawing.Size(333, 28);
             this.comboIDType.TabIndex = 31;
-            // 
-            // comboStatus
-            // 
-            this.comboStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboStatus.FormattingEnabled = true;
-            this.comboStatus.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.comboStatus.Location = new System.Drawing.Point(314, 212);
-            this.comboStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.comboStatus.Name = "comboStatus";
-            this.comboStatus.Size = new System.Drawing.Size(331, 28);
-            this.comboStatus.TabIndex = 31;
             // 
             // label2
             // 
@@ -378,7 +365,51 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 20);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Tipo de Identificacion:";
+            this.label2.Text = "Tipo de Identificación:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(91, 65);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "No. Identificación:";
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(314, 62);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(332, 26);
+            this.txtID.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(160, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Nombre:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(314, 112);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(332, 26);
+            this.txtNombre.TabIndex = 35;
             // 
             // label4
             // 
@@ -404,49 +435,20 @@
             this.label5.TabIndex = 36;
             this.label5.Text = "Contacto:";
             // 
-            // label1
+            // comboStatus
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 115);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(314, 112);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(332, 26);
-            this.txtNombre.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(98, 65);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Nº Identificacion:";
-            // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(314, 62);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(332, 26);
-            this.txtID.TabIndex = 33;
+            this.comboStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboStatus.FormattingEnabled = true;
+            this.comboStatus.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.comboStatus.Location = new System.Drawing.Point(314, 212);
+            this.comboStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.comboStatus.Name = "comboStatus";
+            this.comboStatus.Size = new System.Drawing.Size(331, 28);
+            this.comboStatus.TabIndex = 31;
             // 
             // textBox1
             // 

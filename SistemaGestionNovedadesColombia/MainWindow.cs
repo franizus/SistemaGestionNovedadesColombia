@@ -243,7 +243,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void registrarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Personal.Personal p = new Personal.Personal("Registrar");
+            Personal.Personal p = new Personal.Personal("Registrar", "");
             p.Text = "Registrar Vendedor";
             p.Show();
         }
