@@ -188,6 +188,71 @@ create nonclustered index RELATIONSHIP_1_FK on CLIENTE (IDZONA ASC)
 go
 
 /*==============================================================*/
+/* Table: DETALLEFACTURA                                        */
+/*==============================================================*/
+create table DETALLEFACTURA (
+   IDFACTURA            int                  null,
+   REFERENCIA           varchar(15)          not null,
+   CANTIDAD             int                  not null,
+   REFERENCIAF          varchar(15)          not null,
+   DESCRIPCION          varchar(100)         not null,
+   PRECIOUNIT           money                not null,
+   PRECIOTOT            money                not null
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_5_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_5_FK on DETALLEFACTURA (IDFACTURA ASC)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_9_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_9_FK on DETALLEFACTURA (REFERENCIA ASC)
+go
+
+/*==============================================================*/
+/* Table: FACTURA                                               */
+/*==============================================================*/
+create table FACTURA (
+   IDFACTURA            int                  identity,
+   IDVENDEDOR           varchar(15)          not null,
+   PARAMID              int                  not null,
+   IDCLIENTE            varchar(15)          null,
+   FECHA                datetime             not null,
+   TIPO                 bit                  not null,
+   EMITIDO              bit                  not null,
+   NUMEROFACT           varchar(20)          null,
+   constraint PK_FACTURA primary key (IDFACTURA)
+)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_8_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_8_FK on FACTURA (PARAMID ASC)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_9_FK                                     */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_9_FK on FACTURA (IDCLIENTE ASC)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_10_FK                                    */
+/*==============================================================*/
+
+create nonclustered index RELATIONSHIP_10_FK on FACTURA (IDVENDEDOR ASC)
+go
+
+/*==============================================================*/
 /* Table: GRUPOTALLACOLOR                                       */
 /*==============================================================*/
 create table GRUPOTALLACOLOR (

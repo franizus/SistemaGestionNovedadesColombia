@@ -42,10 +42,8 @@ namespace SistemaGestionNovedadesColombia.Facturacion
             else
             {
                 txtID.Enabled = false;
-                txtNombre.Enabled = false;
                 textBox1.Enabled = false;
                 richTextBox1.Enabled = false;
-                dateTimePicker2.Enabled = false;
                 dataGridView1.Enabled = false;
                 if (tipo.Equals("Consultar"))
                 {
@@ -83,7 +81,6 @@ namespace SistemaGestionNovedadesColombia.Facturacion
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtNombre.Text = "";
             txtID.Text = "";
             textBox1.Text = "";
             richTextBox1.Text = "";
