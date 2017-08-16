@@ -1018,6 +1018,20 @@ BEGIN
 		   @CANTIDAD
      ) 
 END 
+go
+
+CREATE PROCEDURE actualizarEntrada
+   @REFERENCIA           varchar(15),
+   @TALLA                varchar(10),
+   @COLOR                varchar(20),
+   @CANTIDAD             int
+AS 
+BEGIN 
+	UPDATE TYCXPRODUCTO SET
+		   CANTIDAD = @CANTIDAD
+     WHERE REFERENCIA = @REFERENCIA AND TALLA = @TALLA AND COLOR = @COLOR
+END 
+go
 
 
 
