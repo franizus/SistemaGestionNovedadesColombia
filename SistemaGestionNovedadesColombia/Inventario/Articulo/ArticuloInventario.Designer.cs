@@ -33,12 +33,18 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtReferencia = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.comboGrupo = new System.Windows.Forms.ComboBox();
-            this.comboLinea = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.comboLinea = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboGrupo = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.numericPrecioVenta = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericPrecioCompra = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -48,21 +54,15 @@
             this.btnSalir2 = new System.Windows.Forms.Button();
             this.btnDarDe = new System.Windows.Forms.Button();
             this.gridViewArticulo = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericPrecioCompra = new System.Windows.Forms.NumericUpDown();
-            this.numericPrecioVenta = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioCompra)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewArticulo)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioCompra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -151,18 +151,6 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Nombre:";
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 179);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(209, 20);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Grupo de Tallas y Colores:";
-            // 
             // txtReferencia
             // 
             this.txtReferencia.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -183,17 +171,17 @@
             this.txtNombre.Size = new System.Drawing.Size(332, 26);
             this.txtNombre.TabIndex = 33;
             // 
-            // comboGrupo
+            // label5
             // 
-            this.comboGrupo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboGrupo.FormattingEnabled = true;
-            this.comboGrupo.Location = new System.Drawing.Point(338, 175);
-            this.comboGrupo.Margin = new System.Windows.Forms.Padding(4);
-            this.comboGrupo.Name = "comboGrupo";
-            this.comboGrupo.Size = new System.Drawing.Size(332, 28);
-            this.comboGrupo.TabIndex = 37;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(95, 125);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(150, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Linea de Producto:";
             // 
             // comboLinea
             // 
@@ -207,17 +195,102 @@
             this.comboLinea.Size = new System.Drawing.Size(332, 28);
             this.comboLinea.TabIndex = 38;
             // 
-            // label5
+            // label4
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(95, 125);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 20);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Linea de Producto:";
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(174, 233);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 20);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Precios:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 179);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(209, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Grupo de Tallas y Colores:";
+            // 
+            // comboGrupo
+            // 
+            this.comboGrupo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboGrupo.FormattingEnabled = true;
+            this.comboGrupo.Location = new System.Drawing.Point(338, 175);
+            this.comboGrupo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboGrupo.Name = "comboGrupo";
+            this.comboGrupo.Size = new System.Drawing.Size(332, 28);
+            this.comboGrupo.TabIndex = 37;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel4.Controls.Add(this.numericPrecioVenta, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label7, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.numericPrecioCompra, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(253, 219);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(502, 49);
+            this.tableLayoutPanel4.TabIndex = 39;
+            // 
+            // numericPrecioVenta
+            // 
+            this.numericPrecioVenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numericPrecioVenta.DecimalPlaces = 2;
+            this.numericPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericPrecioVenta.Location = new System.Drawing.Point(378, 11);
+            this.numericPrecioVenta.Name = "numericPrecioVenta";
+            this.numericPrecioVenta.Size = new System.Drawing.Size(82, 27);
+            this.numericPrecioVenta.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Compra:   $";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(291, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 20);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Venta:   $";
+            // 
+            // numericPrecioCompra
+            // 
+            this.numericPrecioCompra.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.numericPrecioCompra.DecimalPlaces = 2;
+            this.numericPrecioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericPrecioCompra.Location = new System.Drawing.Point(128, 11);
+            this.numericPrecioCompra.Name = "numericPrecioCompra";
+            this.numericPrecioCompra.Size = new System.Drawing.Size(82, 27);
+            this.numericPrecioCompra.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
@@ -331,87 +404,17 @@
             // 
             // gridViewArticulo
             // 
+            this.gridViewArticulo.AllowUserToAddRows = false;
+            this.gridViewArticulo.AllowUserToDeleteRows = false;
             this.gridViewArticulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gridViewArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewArticulo.Enabled = false;
             this.gridViewArticulo.Location = new System.Drawing.Point(16, 322);
             this.gridViewArticulo.Name = "gridViewArticulo";
+            this.gridViewArticulo.ReadOnly = true;
             this.gridViewArticulo.RowTemplate.Height = 24;
             this.gridViewArticulo.Size = new System.Drawing.Size(737, 227);
             this.gridViewArticulo.TabIndex = 14;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(174, 233);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 20);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Precios:";
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 4;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel4.Controls.Add(this.numericPrecioVenta, 3, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label7, 2, 0);
-            this.tableLayoutPanel4.Controls.Add(this.numericPrecioCompra, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(253, 219);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(502, 49);
-            this.tableLayoutPanel4.TabIndex = 39;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Compra:   $";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(291, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 20);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Venta:   $";
-            // 
-            // numericPrecioCompra
-            // 
-            this.numericPrecioCompra.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericPrecioCompra.DecimalPlaces = 2;
-            this.numericPrecioCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericPrecioCompra.Location = new System.Drawing.Point(128, 11);
-            this.numericPrecioCompra.Name = "numericPrecioCompra";
-            this.numericPrecioCompra.Size = new System.Drawing.Size(82, 27);
-            this.numericPrecioCompra.TabIndex = 2;
-            // 
-            // numericPrecioVenta
-            // 
-            this.numericPrecioVenta.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.numericPrecioVenta.DecimalPlaces = 2;
-            this.numericPrecioVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericPrecioVenta.Location = new System.Drawing.Point(378, 11);
-            this.numericPrecioVenta.Name = "numericPrecioVenta";
-            this.numericPrecioVenta.Size = new System.Drawing.Size(82, 27);
-            this.numericPrecioVenta.TabIndex = 3;
             // 
             // Producto
             // 
@@ -425,13 +428,13 @@
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioCompra)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewArticulo)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioCompra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericPrecioVenta)).EndInit();
             this.ResumeLayout(false);
 
         }

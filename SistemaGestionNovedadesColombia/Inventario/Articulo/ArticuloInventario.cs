@@ -183,7 +183,7 @@ namespace SistemaGestionNovedadesColombia.Inventario
         private void initGridView()
         {
             conexionSql.Conectar();
-            string query = "select * from vistaArticuloTallas where REFERENCIA = '" + txtReferencia + "'";
+            string query = "select * from vistaArticuloTallas where REFERENCIA = '" + txtReferencia.Text + "'";
             var dataAdapter = new SqlDataAdapter(query, conexionSql.getConnection());
             var ds = new DataTable();
             dataAdapter.Fill(ds);
@@ -194,7 +194,8 @@ namespace SistemaGestionNovedadesColombia.Inventario
             conexionSql.Desconectar();
 
             gridViewArticulo.Columns[3].Visible = false;
-            gridViewArticulo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            gridViewArticulo.Columns[0].Width = 150;
+            gridViewArticulo.Columns[1].Width = 150;
             gridViewArticulo.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 

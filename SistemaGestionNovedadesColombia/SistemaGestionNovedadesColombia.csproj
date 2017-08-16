@@ -118,12 +118,6 @@
     <Compile Include="Facturacion\Factura.Designer.cs">
       <DependentUpon>Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventario\Articulo\AgregarArticulo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventario\Articulo\AgregarArticulo.Designer.cs">
-      <DependentUpon>AgregarArticulo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventario\Articulo\BusquedaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +129,12 @@
     </Compile>
     <Compile Include="Inventario\Articulo\ArticuloInventario.Designer.cs">
       <DependentUpon>ArticuloInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Stock\ArticuloSalida.Designer.cs">
+      <DependentUpon>ArticuloSalida.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventario\Stock\ArticuloStock.cs">
       <SubType>Form</SubType>
@@ -243,14 +243,23 @@
     <EmbeddedResource Include="Facturacion\Factura.resx">
       <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\Articulo\AgregarArticulo.resx">
-      <DependentUpon>AgregarArticulo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Articulo\ArticuloInventario.resx">
       <DependentUpon>ArticuloInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Articulo\BusquedaArticulo.resx">
       <DependentUpon>BusquedaArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\ArticuloSalida.resx">
+      <DependentUpon>ArticuloSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\ArticuloStock.resx">
+      <DependentUpon>ArticuloStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\Entrada.resx">
+      <DependentUpon>Entrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Stock\Salida.resx">
+      <DependentUpon>Salida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

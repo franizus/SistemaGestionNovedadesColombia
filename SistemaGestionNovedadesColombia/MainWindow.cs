@@ -14,6 +14,7 @@ using SistemaGestionNovedadesColombia.Administracion.Parametros;
 using SistemaGestionNovedadesColombia.Administracion.Usuario;
 using SistemaGestionNovedadesColombia.Facturacion;
 using SistemaGestionNovedadesColombia.Inventario;
+using SistemaGestionNovedadesColombia.Inventario.Stock;
 using SistemaGestionNovedadesColombia.Personal;
 using SistemaGestionNovedadesColombia.Proveedor;
 
@@ -298,12 +299,14 @@ namespace SistemaGestionNovedadesColombia
 
         private void entradaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Entrada entrada = new Entrada();
+            entrada.Show();
         }
 
         private void salidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Salida salida = new Salida();
+            salida.Show();
         }
 
         private void emitirFactura_Click(object sender, EventArgs e)

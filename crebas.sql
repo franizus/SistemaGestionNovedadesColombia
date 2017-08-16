@@ -996,6 +996,29 @@ BEGIN
 END 
 GO
 
+CREATE PROCEDURE registrarEntrada
+   @REFERENCIA           varchar(15),
+   @TALLA                varchar(10),
+   @COLOR                varchar(20),
+   @CANTIDAD             int
+AS 
+BEGIN 
+     INSERT INTO TYCXPRODUCTO
+     ( 
+            REFERENCIA,
+		   TALLA,
+		   COLOR,
+		   CANTIDAD
+     ) 
+     VALUES 
+     ( 
+             @REFERENCIA,
+		   @TALLA,
+		   @COLOR,
+		   @CANTIDAD
+     ) 
+END 
+
 
 
 /*
@@ -1048,6 +1071,12 @@ select REFERENCIA as 'Referencia', NOMBREART as 'Nombre', CASE WHEN ESTADO = 0 T
 from ARTICULO
 go
 
+create view articuloProv as
+select p.NOMBRE, a.NOMBREART
+from ARTICULO a join PROVEEDOR p
+on a.IDPROVEEDOR = p.IDPROVEEDOR
+go
+
 
 
 
@@ -1064,6 +1093,7 @@ select * from GRUPOTALLACOLOR
 select * from VENDEDOR
 select * from PROVEEDOR
 select * from ARTICULO
+select * from TYCXPRODUCTO
 --select * from ZonaCiudadProvincia
 go
 
