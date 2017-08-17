@@ -220,7 +220,7 @@ namespace SistemaGestionNovedadesColombia.Personal
                     {
                         conexionSql.Desconectar();
                         conexionSql.Conectar();
-                        SqlCommand cmd1 = new SqlCommand("select * from VENDEDOR where IDVENDEDOR = '" + txtCod.Text + "'", conexionSql.getConnection());
+                        SqlCommand cmd1 = new SqlCommand("select * from VENDEDOR where IDVENDEDOR = '" + txtID.Text + "'", conexionSql.getConnection());
                         SqlDataReader reader1 = cmd1.ExecuteReader();
                         if (!reader1.HasRows)
                         {
