@@ -221,7 +221,6 @@ go
 create table FACTURA (
    IDFACTURA            int                  identity,
    IDVENDEDOR           varchar(15)          not null,
-   PARAMID              int                  not null,
    IDCLIENTE            varchar(15)          null,
    FECHA                datetime             not null,
    TIPO                 bit                  not null,
@@ -230,13 +229,14 @@ create table FACTURA (
    constraint PK_FACTURA primary key (IDFACTURA)
 )
 go
-
-/*==============================================================*/
-/* Index: RELATIONSHIP_8_FK                                     */
-/*==============================================================*/
-
-create nonclustered index RELATIONSHIP_8_FK on FACTURA (PARAMID ASC)
-go
+ALTER TABLE FACTURA ADD OBSERVACION varchar(200) null
+GO
+ALTER TABLE FACTURA ADD PRECIOTOTAL money not null
+GO
+ALTER TABLE FACTURA ADD SUBTOTAL money not null
+GO
+ALTER TABLE FACTURA ADD IVA decimal(3,2) not null
+GO
 
 /*==============================================================*/
 /* Index: RELATIONSHIP_9_FK                                     */
@@ -1098,6 +1098,94 @@ BEGIN
 END 
 go
 
+create PROCEDURE registrarFactura
+   @IDVENDEDOR           varchar(15),
+   @IDCLIENTE            varchar(15),
+   @FECHA                datetime,
+   @TIPO                 bit,
+   @EMITIDO              bit,
+   @NUMEROFACT           varchar(20) = null,
+   @OBSERVACION			varchar(200) = null,
+   @PRECIOTOTAL			money,
+   @SUBTOTAL			money,
+   @IVA					decimal(3,2)
+AS 
+BEGIN 
+     INSERT INTO FACTURA
+     ( 
+           IDVENDEDOR,
+		   IDCLIENTE,
+		   FECHA,
+		   TIPO,
+		   EMITIDO,
+		   NUMEROFACT,
+		   OBSERVACION,
+		   PRECIOTOTAL,
+		   SUBTOTAL,
+		   IVA
+     ) 
+     VALUES 
+     ( 
+           @IDVENDEDOR,
+		   @IDCLIENTE,
+		   @FECHA,
+		   @TIPO,
+		   @EMITIDO,
+		   @NUMEROFACT,
+		   @OBSERVACION,
+		   @PRECIOTOTAL,
+		   @SUBTOTAL,
+		   @IVA
+     ) 
+END 
+go
+
+create PROCEDURE actualizarEmisionFact
+   @EMITIDO              bit,
+   @NUMEROFACT			varchar(20),
+   @IDFACTURA            int
+AS 
+BEGIN 
+	UPDATE FACTURA SET
+		   EMITIDO = @EMITIDO,
+		   NUMEROFACT = @NUMEROFACT
+     WHERE IDFACTURA = @IDFACTURA
+END 
+go
+
+CREATE PROCEDURE registrarDetalleFactura
+   @IDFACTURA            int,
+   @REFERENCIA           varchar(15),
+   @CANTIDAD             int,
+   @REFERENCIAF          varchar(15),
+   @DESCRIPCION          varchar(100),
+   @PRECIOUNIT           money,
+   @PRECIOTOT            money
+AS 
+BEGIN 
+     INSERT INTO DETALLEFACTURA
+     ( 
+           IDFACTURA,
+		   REFERENCIA,
+		   CANTIDAD,
+		   REFERENCIAF,
+		   DESCRIPCION,
+		   PRECIOUNIT,
+		   PRECIOTOT
+     ) 
+     VALUES 
+     ( 
+           @IDFACTURA,
+		   @REFERENCIA,
+		   @CANTIDAD,
+		   @REFERENCIAF,
+		   @DESCRIPCION,
+		   @PRECIOUNIT,
+		   @PRECIOTOT
+     ) 
+END 
+go
+
 
 
 /*
@@ -1150,6 +1238,14 @@ select REFERENCIA as 'Referencia', NOMBREART as 'Nombre', CASE WHEN ESTADO = 0 T
 from ARTICULO
 go
 
+create view vistaFactura as
+select IDFACTURA as 'Identificacion', v.NOMBRE as 'Vendedor', c.NOMBRE as 'Cliente', CASE WHEN EMITIDO = 0 THEN 'No' ELSE 'Si' END as 'Emitido', PRECIOTOTAL as 'Total'
+from FACTURA f join VENDEDOR v
+on f.IDVENDEDOR = v.IDVENDEDOR
+join CLIENTE c
+on f.IDCLIENTE = c.IDCLIENTE
+go
+
 create view articuloProv as
 select p.NOMBRE, a.NOMBREART
 from ARTICULO a join PROVEEDOR p
@@ -1173,6 +1269,8 @@ select * from VENDEDOR
 select * from PROVEEDOR
 select * from ARTICULO
 select * from TYCXPRODUCTO
+select * from FACTURA
+select * from DETALLEFACTURA
 --select * from ZonaCiudadProvincia
 go
 

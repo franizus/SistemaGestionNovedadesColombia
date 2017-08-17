@@ -391,7 +391,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void btnSalir2_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            btnSalir.PerformClick();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

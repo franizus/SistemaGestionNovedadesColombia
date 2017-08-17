@@ -97,7 +97,6 @@ namespace SistemaGestionNovedadesColombia
                 if (!permisos[7])
                 {
                     registrarFactura.Enabled = false;
-                    modificarFactura.Enabled = false;
                 }
             }
             else
@@ -202,7 +201,7 @@ namespace SistemaGestionNovedadesColombia
 
         private void registrarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            Factura f = new Factura("Registrar");
+            Factura f = new Factura("Registrar", 0);
             f.Text = "Registrar Factura";
             f.Show();
         }
@@ -211,13 +210,7 @@ namespace SistemaGestionNovedadesColombia
         {
             BusquedaFactura bf = new BusquedaFactura();
             bf.setTipo("Consultar");
-            bf.Show();
-        }
-
-        private void actualizarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BusquedaFactura bf = new BusquedaFactura();
-            bf.setTipo("Modificar");
+            bf.initGridView();
             bf.Show();
         }
 
@@ -311,18 +304,16 @@ namespace SistemaGestionNovedadesColombia
 
         private void emitirFactura_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void darDeBajaFactura_Click(object sender, EventArgs e)
-        {
-
+            BusquedaFactura bf = new BusquedaFactura();
+            bf.setTipo("Emitir");
+            bf.initGridView();
+            bf.Show();
         }
 
         private void darDeAltaArticulo_Click(object sender, EventArgs e)
         {
             BusquedaArticulo ba = new BusquedaArticulo();
-            ba.setTipo("Dar de Alta");
+            ba.setTipo("Reincorporar");
             ba.initGridView();
             ba.Show();
         }
@@ -330,7 +321,7 @@ namespace SistemaGestionNovedadesColombia
         private void darDeBajaArticulo_Click(object sender, EventArgs e)
         {
             BusquedaArticulo ba = new BusquedaArticulo();
-            ba.setTipo("Dar de Baja");
+            ba.setTipo("Desincorporar");
             ba.initGridView();
             ba.Show();
         }

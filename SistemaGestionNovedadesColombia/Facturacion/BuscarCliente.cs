@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,35 @@ namespace SistemaGestionNovedadesColombia.Facturacion
 {
     public partial class BuscarCliente : Form
     {
-        public BuscarCliente()
+        private ConexionSQL conexionSql;
+        private TextBox cliente;
+
+        public BuscarCliente(TextBox client)
         {
             InitializeComponent();
+            cliente = client;
+            conexionSql = new ConexionSQL();
+            MaximizeBox = false;
+            MinimizeBox = false;
+            initGridView();
+            comboBusqueda.SelectedIndex = 0;
+        }
+
+        private void initGridView()
+        {
+            conexionSql.Conectar();
+            string query = "select * from ClienteZona";
+            var dataAdapter = new SqlDataAdapter(query, conexionSql.getConnection());
+            var ds = new DataTable();
+            dataAdapter.Fill(ds);
+            BindingSource bsSource = new BindingSource();
+            bsSource.DataSource = ds;
+            gridViewCliente.ReadOnly = true;
+            gridViewCliente.DataSource = bsSource;
+            conexionSql.Desconectar();
+
+            gridViewCliente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            gridViewCliente.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,13 +53,34 @@ namespace SistemaGestionNovedadesColombia.Facturacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cliente agregado con exito.", "Agregar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            btnSalir.PerformClick();
+            if (gridViewCliente.SelectedRows.Count >= 1)
+            {
+                cliente.Text = gridViewCliente.SelectedRows[0].Cells[1].Value.ToString();
+                btnSalir.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado un cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBusqueda.Clear();
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            var bd = (BindingSource)gridViewCliente.DataSource;
+            var dt = (DataTable)bd.DataSource;
+            dt.DefaultView.RowFilter = string.Format(gridViewCliente.Columns[comboBusqueda.SelectedIndex].DataPropertyName + " like '%{0}%'", txtBusqueda.Text.Trim().Replace("'", "''"));
+            gridViewCliente.Refresh();
+        }
+
+        private void gridViewCliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnSeleccionar.PerformClick();
         }
     }
 }

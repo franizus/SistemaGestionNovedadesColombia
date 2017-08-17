@@ -192,7 +192,7 @@
             this.ClientSize = new System.Drawing.Size(713, 346);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "BusquedaArticulo";
-            this.Text = "Busqueda Articulo";
+            this.Text = "Buscar Articulo";
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewArticulo)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -43,6 +43,7 @@
             this.registrarArticulo = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarArticulo = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarArticulo = new System.Windows.Forms.ToolStripMenuItem();
+            this.darDeAltaArticulo = new System.Windows.Forms.ToolStripMenuItem();
             this.darDeBajaArticulo = new System.Windows.Forms.ToolStripMenuItem();
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entradaInventario = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,8 +52,6 @@
             this.registrarFactura = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarFactura = new System.Windows.Forms.ToolStripMenuItem();
             this.emitirFactura = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarFactura = new System.Windows.Forms.ToolStripMenuItem();
-            this.darDeBajaFactura = new System.Windows.Forms.ToolStripMenuItem();
             this.vendedorMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarVendedor = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarVendedor = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +74,6 @@
             this.activeUserStarusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.dateStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.darDeAltaArticulo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -187,35 +185,42 @@
             this.darDeAltaArticulo,
             this.darDeBajaArticulo});
             this.articuloToolStripMenuItem.Name = "articuloToolStripMenuItem";
-            this.articuloToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.articuloToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.articuloToolStripMenuItem.Text = "Articulo";
             // 
             // registrarArticulo
             // 
             this.registrarArticulo.Name = "registrarArticulo";
-            this.registrarArticulo.Size = new System.Drawing.Size(181, 26);
+            this.registrarArticulo.Size = new System.Drawing.Size(178, 26);
             this.registrarArticulo.Text = "Registrar";
             this.registrarArticulo.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click_1);
             // 
             // consultarArticulo
             // 
             this.consultarArticulo.Name = "consultarArticulo";
-            this.consultarArticulo.Size = new System.Drawing.Size(181, 26);
+            this.consultarArticulo.Size = new System.Drawing.Size(178, 26);
             this.consultarArticulo.Text = "Consultar";
             this.consultarArticulo.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click_1);
             // 
             // modificarArticulo
             // 
             this.modificarArticulo.Name = "modificarArticulo";
-            this.modificarArticulo.Size = new System.Drawing.Size(181, 26);
+            this.modificarArticulo.Size = new System.Drawing.Size(178, 26);
             this.modificarArticulo.Text = "Modificar";
             this.modificarArticulo.Click += new System.EventHandler(this.modificarToolStripMenuItem1_Click_1);
+            // 
+            // darDeAltaArticulo
+            // 
+            this.darDeAltaArticulo.Name = "darDeAltaArticulo";
+            this.darDeAltaArticulo.Size = new System.Drawing.Size(178, 26);
+            this.darDeAltaArticulo.Text = "Reincorporar";
+            this.darDeAltaArticulo.Click += new System.EventHandler(this.darDeAltaArticulo_Click);
             // 
             // darDeBajaArticulo
             // 
             this.darDeBajaArticulo.Name = "darDeBajaArticulo";
-            this.darDeBajaArticulo.Size = new System.Drawing.Size(181, 26);
-            this.darDeBajaArticulo.Text = "Dar de Baja";
+            this.darDeBajaArticulo.Size = new System.Drawing.Size(178, 26);
+            this.darDeBajaArticulo.Text = "Desincorporar";
             this.darDeBajaArticulo.Click += new System.EventHandler(this.darDeBajaArticulo_Click);
             // 
             // stockToolStripMenuItem
@@ -224,7 +229,7 @@
             this.entradaInventario,
             this.salidaInventario});
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.stockToolStripMenuItem.Text = "Stock";
             // 
             // entradaInventario
@@ -246,9 +251,7 @@
             this.facturaMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarFactura,
             this.consultarFactura,
-            this.emitirFactura,
-            this.modificarFactura,
-            this.darDeBajaFactura});
+            this.emitirFactura});
             this.facturaMenuItem.Name = "facturaMenuItem";
             this.facturaMenuItem.Size = new System.Drawing.Size(96, 24);
             this.facturaMenuItem.Text = "Facturación";
@@ -273,20 +276,6 @@
             this.emitirFactura.Size = new System.Drawing.Size(181, 26);
             this.emitirFactura.Text = "Emitir";
             this.emitirFactura.Click += new System.EventHandler(this.emitirFactura_Click);
-            // 
-            // modificarFactura
-            // 
-            this.modificarFactura.Name = "modificarFactura";
-            this.modificarFactura.Size = new System.Drawing.Size(181, 26);
-            this.modificarFactura.Text = "Modificar";
-            this.modificarFactura.Click += new System.EventHandler(this.actualizarPedidoToolStripMenuItem_Click);
-            // 
-            // darDeBajaFactura
-            // 
-            this.darDeBajaFactura.Name = "darDeBajaFactura";
-            this.darDeBajaFactura.Size = new System.Drawing.Size(181, 26);
-            this.darDeBajaFactura.Text = "Dar de Baja";
-            this.darDeBajaFactura.Click += new System.EventHandler(this.darDeBajaFactura_Click);
             // 
             // vendedorMenuItem
             // 
@@ -458,13 +447,6 @@
             this.dateStatusLabel.Size = new System.Drawing.Size(39, 20);
             this.dateStatusLabel.Text = "date";
             // 
-            // darDeAltaArticulo
-            // 
-            this.darDeAltaArticulo.Name = "darDeAltaArticulo";
-            this.darDeAltaArticulo.Size = new System.Drawing.Size(181, 26);
-            this.darDeAltaArticulo.Text = "Dar de Alta";
-            this.darDeAltaArticulo.Click += new System.EventHandler(this.darDeAltaArticulo_Click);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -505,7 +487,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultarProveedor;
         private System.Windows.Forms.ToolStripMenuItem registrarFactura;
         private System.Windows.Forms.ToolStripMenuItem consultarFactura;
-        private System.Windows.Forms.ToolStripMenuItem modificarFactura;
         private System.Windows.Forms.ToolStripMenuItem registrarVendedor;
         private System.Windows.Forms.ToolStripMenuItem modificarVendedor;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
@@ -536,7 +517,6 @@
         private System.Windows.Forms.ToolStripMenuItem salidaInventario;
         private System.Windows.Forms.ToolStripMenuItem darDeBajaArticulo;
         private System.Windows.Forms.ToolStripMenuItem emitirFactura;
-        private System.Windows.Forms.ToolStripMenuItem darDeBajaFactura;
         private System.Windows.Forms.ToolStripMenuItem darDeAltaArticulo;
     }
 }

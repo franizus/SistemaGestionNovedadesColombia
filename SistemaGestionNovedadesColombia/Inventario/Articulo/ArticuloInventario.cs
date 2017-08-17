@@ -84,15 +84,16 @@ namespace SistemaGestionNovedadesColombia.Inventario
                     tableLayoutPanel1.RowStyles[3].Height = 10;
                     btnSalir1.Height = 31;
                 }
-                if (tipo.Equals("Dar de Baja") || tipo.Equals("Dar de Alta"))
+                if (tipo.Equals("Desincorporar") || tipo.Equals("Reincorporar"))
                 {
-                    if (tipo.Equals("Dar de Baja"))
+                    btnDarDe.Width += 28;
+                    if (tipo.Equals("Desincorporar"))
                     {
-                        btnDarDe.Text = "Dar de Baja";
+                        btnDarDe.Text = "Desincorporar";
                     }
                     else
                     {
-                        btnDarDe.Text = "Dar de Alta";
+                        btnDarDe.Text = "Reincorporar";
                     }
                     tableLayoutPanel1.RowStyles[4].SizeType = SizeType.Percent;
                     tableLayoutPanel1.RowStyles[4].Height = 10;

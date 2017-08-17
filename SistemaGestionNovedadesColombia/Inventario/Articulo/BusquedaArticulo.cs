@@ -45,18 +45,18 @@ namespace SistemaGestionNovedadesColombia.Inventario
 
             gridViewArticulo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             gridViewArticulo.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            if (tipo.Equals("Dar de Baja") || tipo.Equals("Dar de Alta"))
+            if (tipo.Equals("Desincorporar") || tipo.Equals("Reincorporar"))
             {
                 comboBusqueda.Items.RemoveAt(2);
                 var bd = (BindingSource)gridViewArticulo.DataSource;
                 var dt = (DataTable)bd.DataSource;
-                if (tipo.Equals("Dar de Baja"))
+                if (tipo.Equals("Desincorporar"))
                 {
                     dt.DefaultView.RowFilter = string.Format(gridViewArticulo.Columns[2].DataPropertyName + " like '%{0}%'", "Activo");
                 }
                 else
                 {
-                    dt.DefaultView.RowFilter = string.Format(gridViewArticulo.Columns[2].DataPropertyName + " like '%{0}%'", "Inactivo");
+                    dt.DefaultView.RowFilter = string.Format(gridViewArticulo.Columns[2].DataPropertyName + " like '%{0}%'", "Ina");
                 }
                 gridViewArticulo.Refresh();
             }
