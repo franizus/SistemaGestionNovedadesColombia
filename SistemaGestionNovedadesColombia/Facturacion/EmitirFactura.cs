@@ -39,8 +39,7 @@ namespace SistemaGestionNovedadesColombia.Facturacion
             }
             else
             {
-                tableLayoutPanel2.ColumnStyles[0].SizeType = SizeType.Absolute;
-                tableLayoutPanel2.ColumnStyles[0].Width = 0;
+                btnConsultar.Text = "Imprimir";
             }
             
             fillForm();
@@ -170,18 +169,27 @@ namespace SistemaGestionNovedadesColombia.Facturacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (validarRegistro())
+            if (btnConsultar.Text.Equals("Imprimir"))
             {
-                guardarFactura();
-                if (MessageBox.Show("Factura emitida con éxito\n¿Desea imprimir la factura?", "Imprimir",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question) == DialogResult.Yes)
+                Imprimit im = new Imprimit();
+                im.Show();
+            }
+            else
+            {
+                if (validarRegistro())
                 {
-                    //imprimir
-                }
-                else
-                {
-                    this.Close();
+                    guardarFactura();
+                    if (MessageBox.Show("Factura emitida con éxito\n¿Desea imprimir la factura?", "Imprimir",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Imprimit im = new Imprimit();
+                        im.Show();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
             }
         }

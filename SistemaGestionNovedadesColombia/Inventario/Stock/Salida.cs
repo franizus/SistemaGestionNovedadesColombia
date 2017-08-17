@@ -62,8 +62,8 @@ namespace SistemaGestionNovedadesColombia.Inventario.Stock
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            gridViewSalida.Rows.RemoveAt(gridViewSalida.SelectedRows[0].Index);
             grids.Remove(gridViewSalida.SelectedRows[0].Cells[0].Value.ToString());
+            gridViewSalida.Rows.RemoveAt(gridViewSalida.SelectedRows[0].Index);
         }
 
         private string getReferencia(string nomArt)

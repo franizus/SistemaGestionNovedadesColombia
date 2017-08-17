@@ -56,6 +56,7 @@ namespace SistemaGestionNovedadesColombia.Facturacion
             else
             {
                 panel1.Enabled = false;
+                contextMenuStrip1.Enabled = false;
 
                 fillForm();
                 fillGridView();
@@ -67,6 +68,7 @@ namespace SistemaGestionNovedadesColombia.Facturacion
                 tableLayoutPanel1.RowStyles[4].SizeType = SizeType.Percent;
                 tableLayoutPanel1.RowStyles[4].Height = 10;
                 btnSalir1.Height = 31;
+                btnImprimir.Height = 31;
             }
         }
 
@@ -307,7 +309,7 @@ namespace SistemaGestionNovedadesColombia.Facturacion
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //imprimir
+                    btnImprimir.PerformClick();
                 }
                 else
                 {
@@ -351,28 +353,23 @@ namespace SistemaGestionNovedadesColombia.Facturacion
             }
         }
 
-        private void btnSalir1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void radioBtnNota_CheckedChanged(object sender, EventArgs e)
         {
             if (radioBtnNota.Checked)
             {
-                tableLayoutPanel8.RowStyles[2].SizeType = SizeType.Percent;
-                tableLayoutPanel8.RowStyles[2].Height = 0;
+                tableLayoutPanel8.RowStyles[1].SizeType = SizeType.Percent;
+                tableLayoutPanel8.RowStyles[1].Height = 0;
             }
             else
             {
-                tableLayoutPanel8.RowStyles[2].SizeType = SizeType.Percent;
-                tableLayoutPanel8.RowStyles[2].Height = 22;
+                tableLayoutPanel8.RowStyles[1].SizeType = SizeType.Percent;
+                tableLayoutPanel8.RowStyles[1].Height = 22;
             }
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -385,8 +382,24 @@ namespace SistemaGestionNovedadesColombia.Facturacion
 
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gridViewFactura.Rows.RemoveAt(gridViewFactura.SelectedRows[0].Index);
             grids.Remove(gridViewFactura.SelectedRows[0].Cells[1].Value.ToString());
+            gridViewFactura.Rows.RemoveAt(gridViewFactura.SelectedRows[0].Index);
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            Imprimit im = new Imprimit();
+            im.Show();
+        }
+
+        private void btnSalir1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Factura_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

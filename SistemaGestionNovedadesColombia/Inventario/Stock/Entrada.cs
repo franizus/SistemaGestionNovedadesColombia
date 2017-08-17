@@ -91,8 +91,8 @@ namespace SistemaGestionNovedadesColombia.Inventario.Stock
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            gridViewEntrada.Rows.RemoveAt(gridViewEntrada.SelectedRows[0].Index);
             grids.Remove(gridViewEntrada.SelectedRows[0].Cells[0].Value.ToString());
+            gridViewEntrada.Rows.RemoveAt(gridViewEntrada.SelectedRows[0].Index);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

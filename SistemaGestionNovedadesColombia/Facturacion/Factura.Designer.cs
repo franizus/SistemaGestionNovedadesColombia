@@ -50,27 +50,29 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnSalir1 = new System.Windows.Forms.Button();
-            this.gridViewFactura = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtObservacion = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblSubT = new System.Windows.Forms.Label();
+            this.lblIVA = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.gridViewFactura = new System.Windows.Forms.DataGridView();
             this.existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.talla = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblIVA = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnSalir1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -78,11 +80,12 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewFactura)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFactura)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -91,9 +94,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnSalir1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.gridViewFactura, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -372,40 +375,6 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnSalir1
-            // 
-            this.btnSalir1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalir1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir1.Location = new System.Drawing.Point(331, 844);
-            this.btnSalir1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSalir1.Name = "btnSalir1";
-            this.btnSalir1.Size = new System.Drawing.Size(107, 1);
-            this.btnSalir1.TabIndex = 12;
-            this.btnSalir1.Text = "Salir";
-            this.btnSalir1.UseVisualStyleBackColor = true;
-            this.btnSalir1.Click += new System.EventHandler(this.btnSalir1_Click);
-            // 
-            // gridViewFactura
-            // 
-            this.gridViewFactura.AllowUserToAddRows = false;
-            this.gridViewFactura.AllowUserToDeleteRows = false;
-            this.gridViewFactura.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gridViewFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridViewFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.existencia,
-            this.talla,
-            this.color,
-            this.precio,
-            this.total});
-            this.gridViewFactura.ContextMenuStrip = this.contextMenuStrip1;
-            this.gridViewFactura.Location = new System.Drawing.Point(16, 296);
-            this.gridViewFactura.Name = "gridViewFactura";
-            this.gridViewFactura.ReadOnly = true;
-            this.gridViewFactura.RowTemplate.Height = 24;
-            this.gridViewFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewFactura.Size = new System.Drawing.Size(737, 293);
-            this.gridViewFactura.TabIndex = 14;
-            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
@@ -477,6 +446,18 @@
             this.label10.TabIndex = 41;
             this.label10.Text = "Total:";
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(119, 75);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(40, 20);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "IVA:";
+            // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -501,6 +482,18 @@
             this.lblSubT.TabIndex = 42;
             this.lblSubT.Text = "0.00";
             // 
+            // lblIVA
+            // 
+            this.lblIVA.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblIVA.AutoSize = true;
+            this.lblIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIVA.Location = new System.Drawing.Point(331, 75);
+            this.lblIVA.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblIVA.Name = "lblIVA";
+            this.lblIVA.Size = new System.Drawing.Size(40, 20);
+            this.lblIVA.TabIndex = 44;
+            this.lblIVA.Text = "0.00";
+            // 
             // lblTotal
             // 
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -524,6 +517,27 @@
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 38;
             this.label7.Text = "Subtotal:";
+            // 
+            // gridViewFactura
+            // 
+            this.gridViewFactura.AllowUserToAddRows = false;
+            this.gridViewFactura.AllowUserToDeleteRows = false;
+            this.gridViewFactura.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gridViewFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewFactura.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.existencia,
+            this.talla,
+            this.color,
+            this.precio,
+            this.total});
+            this.gridViewFactura.ContextMenuStrip = this.contextMenuStrip1;
+            this.gridViewFactura.Location = new System.Drawing.Point(16, 296);
+            this.gridViewFactura.Name = "gridViewFactura";
+            this.gridViewFactura.ReadOnly = true;
+            this.gridViewFactura.RowTemplate.Height = 24;
+            this.gridViewFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridViewFactura.Size = new System.Drawing.Size(737, 293);
+            this.gridViewFactura.TabIndex = 14;
             // 
             // existencia
             // 
@@ -557,30 +571,6 @@
             this.total.Name = "total";
             this.total.ReadOnly = true;
             // 
-            // lblIVA
-            // 
-            this.lblIVA.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblIVA.AutoSize = true;
-            this.lblIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIVA.Location = new System.Drawing.Point(331, 75);
-            this.lblIVA.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblIVA.Name = "lblIVA";
-            this.lblIVA.Size = new System.Drawing.Size(40, 20);
-            this.lblIVA.TabIndex = 44;
-            this.lblIVA.Text = "0.00";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(119, 75);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 20);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "IVA:";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -604,6 +594,47 @@
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.btnImprimir, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnSalir1, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 845);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(764, 1);
+            this.tableLayoutPanel5.TabIndex = 16;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Location = new System.Drawing.Point(137, 2);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(107, 1);
+            this.btnImprimir.TabIndex = 14;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnSalir1
+            // 
+            this.btnSalir1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalir1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir1.Location = new System.Drawing.Point(519, 2);
+            this.btnSalir1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir1.Name = "btnSalir1";
+            this.btnSalir1.Size = new System.Drawing.Size(107, 1);
+            this.btnSalir1.TabIndex = 13;
+            this.btnSalir1.Text = "Salir";
+            this.btnSalir1.UseVisualStyleBackColor = true;
+            this.btnSalir1.Click += new System.EventHandler(this.btnSalir1_Click);
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -612,6 +643,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Factura";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.Factura_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -623,12 +655,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewFactura)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewFactura)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -646,7 +679,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnSalir1;
         private System.Windows.Forms.DataGridView gridViewFactura;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button btnBuscarVendedor;
@@ -677,5 +709,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnSalir1;
     }
 }
